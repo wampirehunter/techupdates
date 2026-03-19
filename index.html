@@ -6,45 +6,86 @@
     <title>TechUpdates | Skolar - Initializing</title>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root { --indigo: #4B0082; --electric: #6A5ACD; --dark: #0a0a0a; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; overflow: hidden; }
+        :root { --indigo: #4B0082; --electric: #6A5ACD; --dark: #0a0a0a; --gray: #1a1a1a; }
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; scroll-behavior: smooth; }
         
-        /* Stealth Background Effect */
-        body::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); opacity: 0.1; z-index: -1; }
+        /* Background Image Logic */
+        .hero { 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+            /* REPLACE THE URL BELOW WITH YOUR BG IMAGE */
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('your-background-image.jpg'); 
+            background-size: cover;
+            background-position: center;
+        }
 
-        .container { z-index: 1; padding: 20px; }
         .logo-main { font-family: 'Rajdhani', sans-serif; font-size: 5rem; font-weight: 700; letter-spacing: 12px; color: white; margin: 0; text-transform: uppercase; }
         .logo-main span { color: var(--electric); }
-        
         .status-bar { border: 1px solid #333; padding: 10px 20px; border-radius: 50px; font-size: 0.8rem; letter-spacing: 2px; color: var(--electric); display: inline-block; margin-bottom: 20px; text-transform: uppercase; }
-        
         .tagline { font-size: 1.1rem; letter-spacing: 5px; color: #888; margin-top: 10px; text-transform: uppercase; }
         .description { max-width: 500px; margin: 30px auto; color: #666; font-weight: 300; line-height: 1.8; }
 
-        .cta-btn { display: inline-block; padding: 15px 40px; border: 1px solid var(--electric); color: white; text-decoration: none; font-weight: 700; letter-spacing: 2px; border-radius: 2px; transition: 0.4s; text-transform: uppercase; }
+        /* Sections */
+        .section { padding: 100px 15%; background: var(--dark); border-top: 1px solid #222; }
+        h2 { font-family: 'Rajdhani', sans-serif; font-size: 2.5rem; letter-spacing: 3px; margin-bottom: 50px; color: var(--electric); text-transform: uppercase; }
+        
+        .profile-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .work-card { background: var(--gray); padding: 35px; border-left: 3px solid var(--indigo); transition: 0.3s; }
+        .work-card:hover { background: #222; transform: scale(1.02); }
+        .work-card h3 { margin-top: 0; color: #fff; font-size: 1.3rem; }
+        .work-card p { color: #888; font-size: 0.95rem; line-height: 1.6; }
+
+        .cta-btn { display: inline-block; padding: 15px 40px; border: 1px solid var(--electric); color: white; text-decoration: none; font-weight: 700; letter-spacing: 2px; border-radius: 2px; transition: 0.4s; text-transform: uppercase; cursor: pointer; }
         .cta-btn:hover { background: var(--electric); box-shadow: 0 0 30px rgba(106, 90, 205, 0.3); }
 
-        .footer { position: absolute; bottom: 40px; font-size: 0.7rem; letter-spacing: 2px; color: #333; }
+        footer { text-align: center; padding: 50px; font-size: 0.7rem; letter-spacing: 2px; color: #333; background: #050505; }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div class="hero">
     <div class="status-bar">● System Initialization In Progress</div>
     <h1 class="logo-main">SKOL<span>AR</span></h1>
     <div class="tagline">The Engine of Education</div>
-    
     <p class="description">
         TechUpdates is currently deploying a next-generation institutional architecture. 
-        Engineered for high-performance connectivity. Built for absolute reliability.
+        Engineered for high-performance connectivity.
     </p>
-
-    <a href="mailto:admin@techupdates.co.in" class="cta-btn">Request Early Access</a>
+    <a href="#portfolio" class="cta-btn">View Proven Systems</a>
 </div>
 
-<div class="footer">
-    TEHUPDATES.CO.IN | STEALTH DEPLOYMENT PHASE 01
-</div>
+<section class="section" id="portfolio">
+    <h2>Proven Architecture</h2>
+    <div class="profile-grid">
+        <div class="work-card">
+            <h3>Enterprise ERP Solutions</h3>
+            <p>Developed and deployed custom end-to-end management systems for high-volume uniform businesses, integrating inventory, sales, and distribution modules.</p>
+        </div>
+        <div class="work-card">
+            <h3>Cloud Infrastructure</h3>
+            <p>Expertise in Amazon Web Services (AWS) deployment, server optimization, and secure database management for real-time applications.</p>
+        </div>
+        <div class="work-card">
+            <h3>Digital Operations</h3>
+            <p>Built advanced automation tools for distribution sales tracking and logistics management, streamlining complex business workflows.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: #050505; text-align: center;">
+    <h2>Get In Touch</h2>
+    <p style="color: #666; margin-bottom: 30px;">For strategic inquiries regarding TechUpdates or early access to the Skolar Engine.</p>
+    <a href="mailto:admin@techupdates.co.in" class="cta-btn">Secure Communication</a>
+</section>
+
+<footer>
+    TECHUPDATES.CO.IN | STEALTH DEPLOYMENT PHASE 01 | BENGALURU, IN
+</footer>
 
 </body>
 </html>
