@@ -12,6 +12,7 @@
         
         /* Hero with Background Image */
         .hero { 
+            position: relative; /* Required to position the logo */
             height: 100vh; 
             display: flex; 
             flex-direction: column; 
@@ -24,8 +25,21 @@
             padding: 20px;
         }
 
-        /* Logo Placeholder */
-        .brand-logo { width: 120px; height: auto; margin-bottom: 20px; filter: drop-shadow(0 0 10px rgba(106, 90, 205, 0.3)); }
+        /* TechUpdates Top-Left Logo & Animation */
+        .company-logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            width: 160px; /* Adjust this number if your logo is too big or small */
+            height: auto;
+            animation: pulse-glow 3s infinite alternate ease-in-out;
+            z-index: 10;
+        }
+
+        @keyframes pulse-glow {
+            0% { filter: drop-shadow(0 0 2px rgba(106, 90, 205, 0.2)); transform: scale(1); }
+            100% { filter: drop-shadow(0 0 15px rgba(106, 90, 205, 0.8)); transform: scale(1.03); }
+        }
 
         .logo-main { font-family: 'Rajdhani', sans-serif; font-size: 5rem; font-weight: 700; letter-spacing: 12px; color: white; margin: 0; text-transform: uppercase; }
         .logo-main span { color: var(--electric); }
@@ -50,18 +64,26 @@
         .cta-btn.secondary:hover { border-color: #fff; color: #fff; }
 
         footer { text-align: center; padding: 60px; font-size: 0.7rem; letter-spacing: 2px; color: #333; background: #050505; }
+        
+        /* Mobile Responsiveness for Top Logo */
+        @media (max-width: 768px) {
+            .company-logo { top: 20px; left: 20px; width: 120px; }
+            .logo-main { font-size: 3.5rem; }
+        }
     </style>
 </head>
 <body>
 
 <div class="hero">
+    <img src="logo.png" alt="TechUpdates Logo" class="company-logo">
+    
     <div class="status-bar">● CORE ENGINE INITIALIZING</div>
     <h1 class="logo-main">SKOL<span>AR</span></h1>
     <div class="tagline">The Engine of Education</div>
     
     <div style="margin-top: 40px;">
         <a href="#services" class="cta-btn">View Architecture</a>
-        <a href="www.linkedin.com/in/hareesh-kumar-p-32a56876" target="_blank" class="cta-btn secondary">LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/hareesh-kumar-p-32a56876/" target="_blank" class="cta-btn secondary">LinkedIn Profile</a>
     </div>
 </div>
 
@@ -91,10 +113,10 @@
     <h2>Direct Interface</h2>
     <p style="color: #555; max-width: 600px; margin: 0 auto 40px auto;">For strategic partnerships, early access to the Skolar Engine, or custom development inquiries.</p>
     
-    <a href="https://wa.me/YOUR_NUMBER?text=Hi%20TechUpdates,%20I%20am%20interested%20in%20the%20Skolar%20Engine%20and%20your%20ERP%20services." class="cta-btn">Initialize Message</a>
+    <a href="https://wa.me/YOUR_NUMBER?text=Hi%20TechUpdates,%20I%20am%20interested%20in%20the%20Skolar%20Engine%20and%20your%20services." class="cta-btn">Initialize Message</a>
     
     <div style="margin-top: 20px;">
-        <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" style="color: var(--electric); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">FOLLOW ON LINKEDIN →</a>
+        <a href="https://www.linkedin.com/in/hareesh-kumar-p-32a56876/" target="_blank" style="color: var(--electric); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">FOLLOW ON LINKEDIN →</a>
     </div>
 </section>
 
