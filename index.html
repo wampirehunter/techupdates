@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechUpdates | Skolar: The Engine of Education</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --indigo: #4B0082; --electric: #6A5ACD; --dark: #0f0f0f; --accent: #silver; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--dark); color: #e0e0e0; line-height: 1.7; }
+        
+        /* Hero Section */
+        header { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle, #1a1a1a 0%, #000 100%); border-bottom: 3px solid var(--indigo); padding: 20px; }
+        .logo-main { font-family: 'Rajdhani', sans-serif; font-size: 4.5rem; font-weight: 700; letter-spacing: 8px; color: white; margin: 0; text-transform: uppercase; }
+        .logo-main span { color: var(--electric); }
+        .tagline { font-size: 1.2rem; letter-spacing: 4px; color: var(--accent); margin-top: 10px; opacity: 0.8; text-transform: uppercase; }
+
+        /* General Sections */
+        .section { padding: 80px 12%; }
+        h2 { font-family: 'Rajdhani', sans-serif; font-size: 2.5rem; color: white; border-left: 5px solid var(--electric); padding-left: 15px; margin-bottom: 40px; }
+        
+        /* Information Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .feature-card { background: #1a1a1a; border: 1px solid #333; padding: 40px; border-radius: 4px; transition: 0.4s ease; position: relative; overflow: hidden; }
+        .feature-card:hover { border-color: var(--electric); background: #222; transform: translateY(-10px); }
+        .feature-card h3 { color: var(--electric); margin-top: 0; font-size: 1.5rem; }
+        
+        /* Specification List */
+        .specs { list-style: none; padding: 0; font-size: 0.9rem; color: #aaa; }
+        .specs li { margin-bottom: 10px; display: flex; align-items: center; }
+        .specs li::before { content: '◈'; color: var(--electric); margin-right: 10px; }
+
+        /* The "Why Us" Section */
+        .about-box { background: linear-gradient(90deg, #1a1a1a, #0f0f0f); padding: 40px; border-radius: 10px; border: 1px solid #444; }
+        
+        /* CTA Button */
+        .cta-btn { display: inline-block; padding: 18px 40px; background: var(--indigo); color: white; text-decoration: none; font-weight: 700; letter-spacing: 2px; border-radius: 2px; margin-top: 30px; transition: 0.3s; text-transform: uppercase; }
+        .cta-btn:hover { background: var(--electric); box-shadow: 0 0 20px rgba(106, 90, 205, 0.4); }
+
+        footer { text-align: center; padding: 60px; background: #000; border-top: 1px solid #222; color: #555; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 class="logo-main">SKOL<span>AR</span></h1>
+    <div class="tagline">The Engine of Education</div>
+    <p style="max-width: 600px; margin-top: 20px; font-weight: 300;">Replacing complex apps with a high-performance WhatsApp-native ERP ecosystem. Built for speed. Engineered for reliability.</p>
+    <a href="#contact" class="cta-btn">Initialize Connection</a>
+</header>
+
+<section class="section">
+    <h2>The Skolar Engine</h2>
+    <div class="grid">
+        <div class="feature-card">
+            <h3>WhatsApp-Native Hub</h3>
+            <p>We eliminate the "App Fatigue." No downloads. No logins. Everything from attendance to fee receipts is delivered instantly to WhatsApp and Telegram.</p>
+            <ul class="specs">
+                <li>Automated Fee Reminders</li>
+                <li>Instant Result Notifications</li>
+                <li>Digital ID Cards via Chat</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>Heavy-Duty Core</h3>
+            <p>Our backend is built on a custom Laravel framework, ensuring your school's data is handled with industrial-grade security and speed.</p>
+            <ul class="specs">
+                <li>MySQL Database Optimization</li>
+                <li>AWS Cloud Deployment</li>
+                <li>End-to-End Encryption</li>
+            </ul>
+        </div>
+        <div class="feature-card">
+            <h3>Unified Inventory</h3>
+            <p>Born from our success with Dream Fashion, we provide a specialized module for uniform and school supply management.</p>
+            <ul class="specs">
+                <li>Real-time Stock Tracking</li>
+                <li>Automated Order Processing</li>
+                <li>Distribution Sale Forms</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: #050505;">
+    <h2>Technical Expertise</h2>
+    <div class="about-box">
+        <p>At <strong>TechUpdates</strong>, we don't just build software; we engineer solutions. With a proven track record in deploying custom ERP systems like <strong>Dream Fashion</strong> and managing <strong>AWS Infrastructure</strong>, we understand the high-stakes world of institutional management.</p>
+        <div class="grid" style="margin-top: 30px;">
+            <div>
+                <strong>Web Engine:</strong> Laravel / PHP 8+<br>
+                <strong>Data Layer:</strong> MySQL / RDS
+            </div>
+            <div>
+                <strong>Cloud:</strong> Amazon Web Services (EC2 / S3)<br>
+                <strong>Engine:</strong> WhatsApp & Telegram Business API
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact" style="text-align: center;">
+    <h2>Direct Connection</h2>
+    <p>Available for global deployments and custom school integrations.</p>
+    <a href="https://wa.me/YOUR_PHONE_NUMBER" class="cta-btn">Message our Engine</a>
+</section>
+
+<footer>
+    &copy; 2026 TechUpdates | Skolar Architecture. Powered by AWS Cloud.
+</footer>
+
+</body>
+</html>
