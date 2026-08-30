@@ -30,7 +30,7 @@ const portfolioProjects = [
         id: 4,
         title: "Luxury Real Estate",
         category: "CONCEPT PROJECT / CAMPAIGN",
-        imagePath: "", 
+        imagePath: "assets/portfolio/luxury-real-estate.jpg", 
         link: "contact.html"
     }
 ];
