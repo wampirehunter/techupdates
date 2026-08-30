@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start a Project | TechUpdates</title>
+    <style>
+        :root {
+            --bg-color: #090a0f;
+            --card-bg: #12141c;
+            --card-border: #1f2330;
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --accent-green: #25d366;
+            --accent-green-hover: #1da851;
+            --input-bg: #0d0e14;
+            --input-border: #2a2e3d;
+            --input-focus: #3b82f6;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        header {
+            border-bottom: 1px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            background-color: rgba(9, 10, 15, 0.9);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .brand-logo img {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--card-border);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            color: var(--text-primary) !important;
+        }
+
+        .nav-cta:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Main Container */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+
+        .hero-title {
+            font-size: 2.75rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            max-width: 650px;
+            margin-bottom: 3rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        @media (min-width: 900px) {
+            .contact-grid {
+                grid-template-columns: 1.6fr 1fr;
+                align-items: start;
+            }
+        }
+
+        /* Form Card Styling */
+        .form-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+        }
+
+        .form-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        label span.required {
+            color: #ef4444;
+            margin-left: 0.2rem;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            background-color: var(--input-bg);
+            border: 1px solid var(--input-border);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1rem;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--input-focus);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%3C94a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1rem;
+            padding-right: 2.5rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent-green);
+            color: #000000;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-top: 2rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-green-hover);
+        }
+
+        .btn-submit:active {
+            transform: scale(0.99);
+        }
+
+        .error-message {
+            color: #ef4444;
+            font-size: 0.8rem;
+            margin-top: 0.35rem;
+            display: none;
+        }
+
+        /* Direct Contact Column */
+        .direct-contact-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .direct-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .direct-card-tag {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        .direct-card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .direct-card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.25rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+
+        .btn-whatsapp {
+            background-color: var(--accent-green);
+            color: #000000;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--accent-green-hover);
+        }
+
+        .btn-mobile {
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            border: 1px solid var(--card-border);
+        }
+
+        .btn-mobile:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--card-border);
+            background-color: var(--bg-color);
+            padding: 3rem 1.5rem;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .footer-brand img {
+            height: 28px;
+            width: auto;
+        }
+
+        .footer-copy {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="TechUpdates Logo">
+                <span>TechUpdates.</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="ai-advertising.html">AI Advertising</a></li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="nav-cta active">Start a Project</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <h1 class="hero-title">Start a Project</h1>
+        <p class="hero-subtitle">Tell us about your project requirements or reach out directly via WhatsApp or phone call.</p>
+
+        <div class="contact-grid">
+            <!-- Form Card -->
+            <div class="form-card">
+                <h2>Project Form</h2>
+                <form id="projectForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                            <div class="error-message" id="fullNameError">Please enter your full name.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company / Brand</label>
+                            <input type="text" id="company" name="company" placeholder="Acme Inc.">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">WhatsApp / Mobile Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+                        <div class="error-message" id="phoneError">Please enter your WhatsApp / Mobile number.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceNeeded">What do you need? <span class="required">*</span></label>
+                        <select id="serviceNeeded" name="serviceNeeded" required>
+                            <option value="" disabled selected>Select a service</option>
+                            <option value="AI Advertising & Marketing">AI Advertising & Marketing</option>
+                            <option value="Web & Software Development">Web & Software Development</option>
+                            <option value="Product Strategy & Branding">Product Strategy & Branding</option>
+                            <option value="Custom Enterprise Solution">Custom Enterprise Solution</option>
+                            <option value="Other / General Inquiry">Other / General Inquiry</option>
+                        </select>
+                        <div class="error-message" id="serviceError">Please select a service option.</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="projectDetails">Project Details <span class="required">*</span></label>
+                        <textarea id="projectDetails" name="projectDetails" placeholder="Describe your project goals, key features, or vision..." required></textarea>
+                        <div class="error-message" id="detailsError">Please describe your project details.</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Estimated Budget</label>
+                            <select id="budget" name="budget">
+                                <option value="Not Specified">Select budget range</option>
+                                <option value="Under ₹50,000">Under ₹50,000</option>
+                                <option value="₹50,000 - ₹1,50,000">₹50,000 - ₹1,50,000</option>
+                                <option value="₹1,50,000 - ₹5,00,000">₹1,50,000 - ₹5,00,000</option>
+                                <option value="₹5,00,000+">₹5,00,000+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Desired Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="Not Specified">Select timeline</option>
+                                <option value="Immediate (1-2 weeks)">Immediate (1-2 weeks)</option>
+                                <option value="1 Month">1 Month</option>
+                                <option value="2-3 Months">2-3 Months</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                        <span>Start the Conversation</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Direct Contact Sidebar -->
+            <div class="direct-contact-sidebar">
+                <div class="direct-card">
+                    <span class="direct-card-tag">WHATSAPP</span>
+                    <h3 class="direct-card-title">Instant Chat</h3>
+                    <p class="direct-card-desc">Prefer a direct message? Start a real-time conversation with our team on WhatsApp.</p>
+                    <a href="#" id="directWhatsappBtn" class="btn-action btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        Chat on WhatsApp
+                    </a>
+                </div>
+
+                <div class="direct-card">
+                    <span class="direct-card-tag">MOBILE</span>
+                    <h3 class="direct-card-title">Direct Call</h3>
+                    <p class="direct-card-desc">Speak directly with a project representative during business hours.</p>
+                    <a href="#" id="directMobileBtn" class="btn-action btn-mobile">
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="logo.png" alt="TechUpdates Logo">
+                <span>TechUpdates.</span>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 TechUpdates. All rights reserved.
+            </div>
+            <ul class="footer-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Script / Logic -->
+    <script>
+        // ==========================================
+        // CONFIGURATION: ENTER YOUR REAL NUMBERS BELOW
+        // ==========================================
+        const WHATSAPP_NUMBER = "919400977424";
+const MOBILE_NUMBER = "+919400977424";
+        // ==========================================
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const directWhatsappBtn = document.getElementById("directWhatsappBtn");
+            const directMobileBtn = document.getElementById("directMobileBtn");
+
+            // Attach actions to buttons
+            if (directWhatsappBtn) {
+                directWhatsappBtn.href = `https://wa.me/${WHATSAPP_NUMBER}`;
+            }
+
+            if (directMobileBtn) {
+                directMobileBtn.href = `tel:${MOBILE_NUMBER}`;
+            }
+
+            // Form Submit Logic
+            const form = document.getElementById("projectForm");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                // Clear error indicators
+                document.querySelectorAll(".error-message").forEach(el => el.style.display = "none");
+
+                // Retrieve form values
+                const fullName = document.getElementById("fullName");
+                const company = document.getElementById("company");
+                const phone = document.getElementById("phone");
+                const serviceNeeded = document.getElementById("serviceNeeded");
+                const projectDetails = document.getElementById("projectDetails");
+                const budget = document.getElementById("budget");
+                const timeline = document.getElementById("timeline");
+
+                let isValid = true;
+
+                if (!fullName.value.trim()) {
+                    document.getElementById("fullNameError").style.display = "block";
+                    isValid = false;
+                }
+
+                if (!phone.value.trim()) {
+                    document.getElementById("phoneError").style.display = "block";
+                    isValid = false;
+                }
+
+                if (!serviceNeeded.value) {
+                    document.getElementById("serviceError").style.display = "block";
+                    isValid = false;
+                }
+
+                if (!projectDetails.value.trim()) {
+                    document.getElementById("detailsError").style.display = "block";
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    return;
+                }
+
+                // Construct formatted pre-filled WhatsApp message
+                const messageText = `New Project Inquiry from TechUpdates:
+
+*Name:* ${fullName.value.trim()}
+*Company / Brand:* ${company.value.trim() || "N/A"}
+*Mobile / WhatsApp:* ${phone.value.trim()}
+*Service Needed:* ${serviceNeeded.value}
+*Project Details:* ${projectDetails.value.trim()}
+*Estimated Budget:* ${budget.value}
+*Desired Timeline:* ${timeline.value}`;
+
+                const encodedMessage = encodeURIComponent(messageText);
+                const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+                // Redirect user to WhatsApp
+                window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+            });
+        });
+    </script>
+</body>
+</html>
