@@ -16,7 +16,7 @@ const portfolioProjects = [
         id: 2,
         title: "Premium Watch Advertisement",
         category: "CONCEPT PROJECT / BRANDING",
-        imagePath: "", // Replace with "assets/images/watch-commercial.jpg" when generated
+        imagePath: "assets/portfolio/watch-commercial.jpg",
         link: "contact.html"
     },
     {
