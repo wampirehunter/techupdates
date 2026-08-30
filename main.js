@@ -23,7 +23,7 @@ const portfolioProjects = [
         id: 3,
         title: "Restaurant Food Commercial",
         category: "CONCEPT PROJECT / SOCIAL REELS",
-        imagePath: "", 
+        imagePath: "assets/portfolio/restaurant-food-commercial.jpg", 
         link: "contact.html"
     },
     {
