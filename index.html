@@ -3,126 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechUpdates | Skolar - High Performance Architecture</title>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root { --indigo: #4B0082; --electric: #6A5ACD; --dark: #0a0a0a; --gray: #161616; }
-        * { box-sizing: border-box; }
-        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--dark); color: #fff; scroll-behavior: smooth; }
-        
-        /* Hero with Background Image */
-        .hero { 
-            position: relative; /* Required to position the logo */
-            height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('bg.png'); 
-            background-size: cover;
-            background-position: center;
-            padding: 20px;
-        }
-
-        /* TechUpdates Top-Left Logo & Animation */
-        .company-logo {
-            position: absolute;
-            top: 30px;
-            left: 40px;
-            width: 160px; /* Adjust this number if your logo is too big or small */
-            height: auto;
-            animation: pulse-glow 3s infinite alternate ease-in-out;
-            z-index: 10;
-        }
-
-        @keyframes pulse-glow {
-            0% { filter: drop-shadow(0 0 2px rgba(106, 90, 205, 0.2)); transform: scale(1); }
-            100% { filter: drop-shadow(0 0 15px rgba(106, 90, 205, 0.8)); transform: scale(1.03); }
-        }
-
-        .logo-main { font-family: 'Rajdhani', sans-serif; font-size: 5rem; font-weight: 700; letter-spacing: 12px; color: white; margin: 0; text-transform: uppercase; }
-        .logo-main span { color: var(--electric); }
-        .status-bar { border: 1px solid #333; padding: 10px 20px; border-radius: 50px; font-size: 0.7rem; letter-spacing: 2px; color: var(--electric); display: inline-block; margin-bottom: 20px; text-transform: uppercase; }
-        .tagline { font-size: 1rem; letter-spacing: 5px; color: #888; margin-top: 10px; text-transform: uppercase; }
-
-        /* Sections */
-        .section { padding: 100px 10%; background: var(--dark); border-top: 1px solid #222; }
-        h2 { font-family: 'Rajdhani', sans-serif; font-size: 2.2rem; letter-spacing: 3px; margin-bottom: 50px; color: var(--electric); text-transform: uppercase; text-align: center;}
-        
-        /* Services Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: var(--gray); padding: 40px; border: 1px solid #222; transition: 0.4s; position: relative; }
-        .card:hover { border-color: var(--electric); transform: translateY(-5px); }
-        .card h3 { margin-top: 0; color: #fff; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; }
-        .card p { color: #777; font-size: 0.9rem; line-height: 1.6; }
-
-        /* CTA Buttons */
-        .cta-btn { display: inline-block; padding: 15px 35px; border: 1px solid var(--electric); color: white; text-decoration: none; font-weight: 700; letter-spacing: 2px; border-radius: 2px; transition: 0.4s; text-transform: uppercase; cursor: pointer; margin: 10px; font-size: 0.8rem; }
-        .cta-btn:hover { background: var(--electric); box-shadow: 0 0 30px rgba(106, 90, 205, 0.3); }
-        .cta-btn.secondary { border-color: #444; color: #888; }
-        .cta-btn.secondary:hover { border-color: #fff; color: #fff; }
-
-        footer { text-align: center; padding: 60px; font-size: 0.7rem; letter-spacing: 2px; color: #333; background: #050505; }
-        
-        /* Mobile Responsiveness for Top Logo */
-        @media (max-width: 768px) {
-            .company-logo { top: 20px; left: 20px; width: 120px; }
-            .logo-main { font-size: 3.5rem; }
-        }
-    </style>
+    <title>TechUpdates | AI Advertising & Digital Solutions</title>
+    <meta name="description" content="TechUpdates creates AI-powered advertisements, cinematic product videos, professional websites, applications and custom digital solutions for modern businesses.">
+    
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="TechUpdates | AI Advertising & Digital Solutions">
+    <meta property="og:description" content="Creative Ideas. Digital Experiences. Real Business Impact.">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="hero">
-    <img src="logo.png" alt="TechUpdates Logo" class="company-logo">
-    
-    <div class="status-bar">● CORE ENGINE INITIALIZING</div>
-    <h1 class="logo-main">SKOL<span>AR</span></h1>
-    <div class="tagline">The Engine of Education</div>
-    
-    <div style="margin-top: 40px;">
-        <a href="#services" class="cta-btn">View Architecture</a>
-        <a href="https://www.linkedin.com/in/hareesh-kumar-p-32a56876/" target="_blank" class="cta-btn secondary">LinkedIn Profile</a>
-    </div>
-</div>
-
-<section class="section" id="services">
-    <h2>Specialized Deployments</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>Enterprise ERP</h3>
-            <p>Industrial-grade management systems optimized for inventory, distribution, and institutional scale.</p>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">TechUpdates.</a>
+            <div class="nav-links">
+                <a href="services.html">Services</a>
+                <a href="ai-advertising.html">AI Advertising</a>
+                <a href="work.html">Work</a>
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+            </div>
+            <a href="contact.html" class="btn btn-primary">Start a Project</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="card">
-            <h3>App Development</h3>
-            <p>High-performance mobile ecosystems designed for seamless user connection and reliability.</p>
-        </div>
-        <div class="card">
-            <h3>Web Engineering</h3>
-            <p>Next-generation web platforms built on secure, scalable frameworks (Laravel/PHP/AWS).</p>
-        </div>
-        <div class="card">
-            <h3>E-Commerce Hubs</h3>
-            <p>Full-stack digital commerce solutions with integrated logistics and distribution sales logic.</p>
-        </div>
-    </div>
-</section>
+    </nav>
 
-<section class="section" id="contact" style="text-align: center; background: #050505;">
-    <h2>Direct Interface</h2>
-    <p style="color: #555; max-width: 600px; margin: 0 auto 40px auto;">For strategic partnerships, early access to the Skolar Engine, or custom development inquiries.</p>
-    
-    <a href="https://wa.me/YOUR_NUMBER?text=Hi%20TechUpdates,%20I%20am%20interested%20in%20the%20Skolar%20Engine%20and%20your%20services." class="cta-btn">Initialize Message</a>
-    
-    <div style="margin-top: 20px;">
-        <a href="https://www.linkedin.com/in/hareesh-kumar-p-32a56876/" target="_blank" style="color: var(--electric); text-decoration: none; font-size: 0.8rem; letter-spacing: 1px;">FOLLOW ON LINKEDIN →</a>
-    </div>
-</section>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-video-wrapper">
+            <!-- Fallback poster image for fast loading -->
+            <video autoplay muted loop playsinline poster="assets/images/hero-poster.jpg" class="hero-bg-video">
+                <!-- Replace with actual video generated from AI plan -->
+                <!-- <source src="assets/videos/hero-advertising.mp4" type="video/mp4"> -->
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <span class="hero-label">Creative & Technology Agency</span>
+            <h1 class="hero-title">We Create Digital Experiences That Get Noticed.</h1>
+            <p class="hero-subtitle">AI-powered advertising, cinematic product content, and professional digital solutions for modern businesses.</p>
+            <div class="hero-actions">
+                <a href="contact.html" class="btn btn-primary">Start a Project</a>
+                <a href="#work" class="btn btn-secondary">View Our Work</a>
+            </div>
+        </div>
+    </header>
 
-<footer>
-    TECHUPDATES.CO.IN | STEALTH DEPLOYMENT PHASE 01 | BENGALURU, IN
-</footer>
+    <!-- IMMEDIATE VALUE / WHAT WE DO -->
+    <section class="value-prop section-padding">
+        <div class="container">
+            <h2 class="section-title">Creative Ideas. Digital Experiences.<br>Real Business Impact.</h2>
+            <p class="section-desc">We combine creative production and technology to help businesses build better brands, better content, and better digital experiences.</p>
+            
+            <div class="capabilities-grid">
+                <div class="capability-item">Advertising</div>
+                <div class="capability-item">Content</div>
+                <div class="capability-item">Web</div>
+                <div class="capability-item">Apps</div>
+                <div class="capability-item">Business Software</div>
+            </div>
+        </div>
+    </section>
 
+    <!-- CREATIVE SERVICES -->
+    <section class="services-section section-padding bg-darker">
+        <div class="container">
+            <h2 class="section-title">Creative That Makes Your Brand Stand Out.</h2>
+            
+            <div class="services-grid">
+                <!-- Service Card -->
+                <div class="service-card">
+                    <h3>AI Product Advertising</h3>
+                    <p>Turn ordinary product photography into cinematic commercial content.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Social Media Reels</h3>
+                    <p>Short-form videos designed for Instagram, Facebook and digital campaigns.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Brand Films</h3>
+                    <p>Story-driven visual content for businesses and brands.</p>
+                </div>
+            </div>
+            
+            <div class="cta-container">
+                <a href="ai-advertising.html" class="btn btn-outline">Explore AI Advertising</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED WORK (Data-driven via JS) -->
+    <section id="work" class="work-section section-padding">
+        <div class="container">
+            <h2 class="section-title">Selected Work</h2>
+            <!-- JS will inject portfolio items here -->
+            <div class="portfolio-grid" id="portfolio-grid"></div>
+        </div>
+    </section>
+
+    <!-- TECHNOLOGY SERVICES -->
+    <section class="tech-section section-padding bg-darker">
+        <div class="container">
+            <h2 class="section-title">Technology Built Around Your Business.</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Websites & Apps</h3>
+                    <p>Professional landing pages, custom web applications, and mobile experiences designed for real users.</p>
+                </div>
+                <div class="service-card">
+                    <h3>ERP & Business Software</h3>
+                    <p>Custom business management platforms to streamline your operations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>E-Commerce</h3>
+                    <p>Scalable online stores and commerce platforms designed for high conversion.</p>
+                </div>
+            </div>
+            <div class="cta-container">
+                <a href="contact.html" class="btn btn-outline">Build My Solution</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS: SKOLAR -->
+    <section class="products-section section-padding">
+        <div class="container">
+            <div class="product-showcase">
+                <div class="product-info">
+                    <span class="eyebrow">Our Products</span>
+                    <h2 class="section-title">Skolar.</h2>
+                    <p>An advanced education technology and management solution developed entirely by TechUpdates. Designed to streamline institutional operations and enhance learning experiences.</p>
+                    <a href="products.html" class="btn btn-secondary mt-4">Discover Skolar</a>
+                </div>
+                <div class="product-visual">
+                    <!-- Placeholder: [AI VISUAL — TO BE GENERATED: skolar-platform.jpg] -->
+                    <div class="visual-placeholder">
+                        <span>AI VISUAL: skolar-platform.jpg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Let's Build Something Worth Talking About.</h2>
+            <a href="contact.html" class="btn btn-primary btn-large">Start a Project</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>TechUpdates.</h3>
+                <p>Creative production and digital technology for modern businesses.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="work.html">Our Work</a>
+                <a href="products.html">Skolar</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <a href="mailto:hello@techupdates.co.in">hello@techupdates.co.in</a>
+                <!-- Replace with pre-filled WhatsApp link -->
+                <a href="https://wa.me/YOURNUMBER?text=Hi%20TechUpdates,%20I'm%20interested%20in%20starting%20a%20project.">WhatsApp Us</a> 
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 TechUpdates. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
