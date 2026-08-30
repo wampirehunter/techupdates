@@ -4,7 +4,6 @@
  * Allows easy updates without modifying HTML.
  */
 
-// 1. PORTFOLIO DATA (Update this to add new projects)
 const portfolioProjects = [
     {
         id: 1,
