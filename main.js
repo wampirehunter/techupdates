@@ -9,7 +9,7 @@ const portfolioProjects = [
         id: 1,
         title: "Luxury Perfume Commercial",
         category: "CONCEPT PROJECT / AI VIDEO",
-        imagePath: "", // Replace with "assets/images/perfume-commercial.jpg" when generated
+        imagePath: "assets/portfolio/perfume-commercial.jpg", 
         link: "contact.html"
     },
     {
