@@ -6,12 +6,12 @@
 
 const portfolioProjects = [
     {
-        id: 1,
-        title: "Luxury Perfume Commercial",
-        category: "CONCEPT PROJECT / AI VIDEO",
-        imagePath: "assets/portfolio/perfume-commercial.jpg", 
-        link: "contact.html"
-    },
+    id: 1,
+    title: "Luxury Perfume Commercial",
+    category: "CONCEPT PROJECT / AI VIDEO",
+    imagePath: "assets/portfolio/perfume-commercial.jpg",
+    link: "contact.html"
+},
     {
         id: 2,
         title: "Premium Watch Advertisement",
