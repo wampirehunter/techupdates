@@ -428,3 +428,282 @@ a {
     
     .hero-actions { flex-direction: column; }
 }
+/* =========================================
+   AI ADVERTISING PAGE
+   ========================================= */
+
+/* Generic Section Styles */
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section-header {
+    margin-bottom: var(--space-xl);
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    margin-top: var(--space-sm);
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: var(--space-xl) 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.hero-description {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-top: var(--space-sm);
+}
+
+.hero-media {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+}
+
+.hero-media img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Grid Utilities */
+.grid-2-col, .grid-3-col, .grid-4-col, .grid-5-col,
+.services-grid, .showcase-grid, .process-grid, .why-ai-grid, .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+/* Services Section */
+.service-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: var(--space-lg);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.card-number {
+    font-family: var(--font-display);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-sm);
+}
+
+/* Showcase Section */
+.showcase-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--bg-secondary);
+}
+
+.image-wrapper img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.showcase-card:hover .image-wrapper img {
+    transform: scale(1.03);
+}
+
+.concept-tag {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+    z-index: 2;
+}
+
+/* Process Section */
+.process-step {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--space-md);
+}
+
+.step-number {
+    font-family: var(--font-display);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: var(--space-xs);
+}
+
+/* Why AI Section */
+.why-card {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.why-card:last-child {
+    border-bottom: none;
+}
+
+/* Deliverables Section */
+.deliverables-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.deliverables-list li {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--border-color);
+    font-family: var(--font-body);
+    color: var(--text-primary);
+    font-size: 1.125rem;
+}
+
+.deliverables-note {
+    display: block;
+    margin-top: var(--space-md);
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-style: italic;
+}
+
+/* Target Audience Section */
+.audience-grid {
+    gap: var(--space-md);
+}
+
+.audience-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    padding: var(--space-md);
+    text-align: center;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+}
+
+/* Final CTA Section */
+.final-cta-section {
+    padding: calc(var(--space-xl) * 2) 0;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.cta-text {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+.cta-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) {
+    .grid-2-col, .showcase-grid, .why-ai-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3-col, .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4-col, .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-5-col, .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .why-card {
+        border-bottom: none;
+    }
+}
+
+/* Desktop (>= 1024px) */
+@media (min-width: 1024px) {
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .grid-3-col, .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-4-col, .audience-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .grid-5-col, .process-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
