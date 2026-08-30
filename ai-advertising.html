@@ -3,277 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Advertising Production Services | TechUpdates</title>
+    <title>AI Advertising & Product Content | TechUpdates</title>
+    <meta name="description" content="AI-powered product advertising, cinematic content, social media creatives and campaign visuals for modern businesses.">
+    <meta name="theme-color" content="#050505">
+    
+    <!-- Google Fonts: Outfit (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="ai-page">
 
-    <!-- Navigation Header -->
+    <!-- NAVIGATION -->
     <header class="navbar">
-        <div class="nav-container">
-
-            <a href="index.html" class="brand-logo">
-                TechUpdates.
-            </a>
-
+        <div class="container nav-container">
+            <a href="./index.html" class="nav-logo">TechUpdates.</a>
+            
             <nav class="nav-links">
-                <a href="index.html">Services</a>
-                <a href="ai-advertising.html">AI Advertising</a>
-                <a href="work.html">Work</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
+                <a href="./index.html">Home</a>
+                <a href="./index.html#services">Services</a>
+                <a href="./ai-advertising.html" class="active">AI Advertising</a>
+                <a href="./index.html#work">Work</a>
+                <a href="./index.html#products">Products</a>
+                <a href="./index.html#about">About</a>
             </nav>
 
-            <a href="contact.html" class="btn btn-primary">
-                Start a Project
-            </a>
-
+            <div class="nav-actions">
+                <a href="./contact.html" class="btn btn-primary">Start a Project</a>
+                
+                <!-- Mobile Menu Button (if wired up in main.js) -->
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <span class="eyebrow">AI-POWERED ADVERTISING</span>
-                <h1>Advertising That<br>Makes People Look Twice.</h1>
-                <p class="hero-description">
-                    We create cinematic product advertising, social content and campaign visuals using AI-powered creative production.
-                </p>
-                <div class="hero-actions">
-                    <a href="contact.html" class="btn btn-primary">START A PROJECT</a>
-                    <a href="work.html" class="btn btn-secondary">VIEW OUR WORK</a>
-                </div>
-            </div>
-            <div class="hero-media">
-                <img src="assets/portfolio/perfume-commercial.jpg" alt="AI Product Advertising Visual">
-            </div>
-        </div>
-    </section>
-
-    <!-- What We Create Section -->
-    <section class="services-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>What We Create</h2>
-                <p class="section-subtitle">From a single product image to a complete advertising campaign.</p>
-            </div>
-            <div class="services-grid grid-3-col">
-                <div class="service-card">
-                    <span class="card-number">01</span>
-                    <h3>AI Product Advertising</h3>
-                    <p>Cinematic product visuals and advertisements designed around your product.</p>
-                </div>
-                <div class="service-card">
-                    <span class="card-number">02</span>
-                    <h3>AI Video Ads</h3>
-                    <p>Short-form advertising videos designed for Instagram, Facebook, YouTube and digital campaigns.</p>
-                </div>
-                <div class="service-card">
-                    <span class="card-number">03</span>
-                    <h3>Social Media Reels</h3>
-                    <p>Attention-focused vertical content built for modern social platforms.</p>
-                </div>
-                <div class="service-card">
-                    <span class="card-number">04</span>
-                    <h3>Product Visuals</h3>
-                    <p>Premium advertising images and campaign visuals.</p>
-                </div>
-                <div class="service-card">
-                    <span class="card-number">05</span>
-                    <h3>Brand Campaigns</h3>
-                    <p>Creative campaign concepts with a consistent visual identity.</p>
-                </div>
-                <div class="service-card">
-                    <span class="card-number">06</span>
-                    <h3>Creative Concepts</h3>
-                    <p>Visual storytelling and advertising directions developed around the brand.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Visual Showcase Section -->
-    <section class="showcase-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>One Product. Multiple Possibilities.</h2>
-            </div>
-            <div class="showcase-grid grid-2-col">
-                <div class="showcase-card">
-                    <div class="image-wrapper">
-                        <img src="assets/portfolio/perfume-commercial.jpg" alt="Perfume Advertising Concept">
-                        <span class="concept-tag">CONCEPT PROJECT</span>
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <h1>Advertising That<br>Makes People Look Twice.</h1>
+                    <p class="hero-subtitle">We create cinematic product advertising, social content and campaign visuals using AI-powered creative production.</p>
+                    <div class="hero-buttons">
+                        <a href="./contact.html" class="btn btn-primary">START A PROJECT</a>
+                        <a href="#showcase" class="btn btn-secondary">VIEW OUR WORK</a>
                     </div>
                 </div>
-                <div class="showcase-card">
-                    <div class="image-wrapper">
-                        <img src="assets/portfolio/watch-commercial.jpg" alt="Watch Advertising Concept">
-                        <span class="concept-tag">CONCEPT PROJECT</span>
-                    </div>
-                </div>
-                <div class="showcase-card">
-                    <div class="image-wrapper">
-                        <img src="assets/portfolio/restaurant-food-commercial.jpg" alt="Food Commercial Concept">
-                        <span class="concept-tag">CONCEPT PROJECT</span>
-                    </div>
-                </div>
-                <div class="showcase-card">
-                    <div class="image-wrapper">
-                        <img src="assets/portfolio/luxury-real-estate.jpg" alt="Luxury Real Estate Concept">
-                        <span class="concept-tag">CONCEPT PROJECT</span>
+                <div class="hero-visual">
+                    <div class="image-wrapper hero-image-wrapper">
+                        <img 
+                            src="./assets/portfolio/perfume-commercial.jpg" 
+                            alt="Luxury perfume bottle on a dark premium cinematic surface"
+                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                        >
+                        <div class="img-fallback" style="display:none;">Creative Visual Coming Soon</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Process Section -->
-    <section class="process-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>From Idea to Advertisement.</h2>
-            </div>
-            <div class="process-grid grid-5-col">
-                <div class="process-step">
-                    <span class="step-number">01</span>
-                    <h3>DISCOVER</h3>
-                    <p>Understand the product, audience and campaign objective.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">02</span>
-                    <h3>CONCEPT</h3>
-                    <p>Develop the creative direction and visual style.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">03</span>
-                    <h3>CREATE</h3>
-                    <p>Produce the visual assets using AI-powered creative workflows.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">04</span>
-                    <h3>REFINE</h3>
-                    <p>Refine composition, motion, visual quality and messaging.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">05</span>
-                    <h3>DELIVER</h3>
-                    <p>Prepare campaign-ready content for the required platforms.</p>
+        <!-- SERVICES -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 class="section-heading">What We Create</h2>
+                <div class="grid-4">
+                    <div class="service-card">
+                        <span class="card-number">01</span>
+                        <h3>AI Product Advertising</h3>
+                        <p>Cinematic product visuals and advertising concepts created for modern brands.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="card-number">02</span>
+                        <h3>Social Media Content</h3>
+                        <p>Scroll-stopping visual content designed for Instagram, Facebook and short-form campaigns.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="card-number">03</span>
+                        <h3>AI Video Production</h3>
+                        <p>Cinematic AI-generated video concepts, product films and promotional reels.</p>
+                    </div>
+                    <div class="service-card">
+                        <span class="card-number">04</span>
+                        <h3>Campaign Creative</h3>
+                        <p>Complete campaign visual concepts for launches, promotions and brand storytelling.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why AI Section -->
-    <section class="why-ai-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>A Faster Way to Create.</h2>
-            </div>
-            <div class="why-ai-grid grid-2-col">
-                <div class="why-card">
-                    <h3>FASTER ITERATION</h3>
-                    <p>Explore multiple creative directions without rebuilding an entire production.</p>
-                </div>
-                <div class="why-card">
-                    <h3>MORE VISUAL OPTIONS</h3>
-                    <p>Test different environments, compositions and campaign concepts.</p>
-                </div>
-                <div class="why-card">
-                    <h3>LOWER PRODUCTION COMPLEXITY</h3>
-                    <p>Create professional visual concepts without requiring a traditional full-scale production for every idea.</p>
-                </div>
-                <div class="why-card">
-                    <h3>CAMPAIGN FLEXIBILITY</h3>
-                    <p>Adapt creative assets for different formats and platforms.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- SHOWCASE -->
+        <section id="showcase" class="section section-darker">
+            <div class="container">
+                <h2 class="section-heading">Selected Creative Work</h2>
+                <div class="portfolio-grid">
+                    
+                    <article class="portfolio-card">
+                        <div class="image-wrapper portfolio-img">
+                            <img src="./assets/portfolio/perfume-commercial.jpg" loading="lazy" alt="Luxury Perfume Commercial" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="img-fallback" style="display:none;">Creative Visual Coming Soon</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="category">AI PRODUCT ADVERTISING</span>
+                            <h3>Luxury Perfume Commercial</h3>
+                        </div>
+                    </article>
 
-    <!-- What You Receive Section -->
-    <section class="deliverables-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Built for Real Campaigns.</h2>
-            </div>
-            <ul class="deliverables-list">
-                <li>Advertising concepts</li>
-                <li>Product advertising images</li>
-                <li>Short-form video ads</li>
-                <li>Social media reels</li>
-                <li>Campaign visuals</li>
-                <li>Creative variations</li>
-                <li>Platform-ready assets</li>
-                <li>Creative direction</li>
-            </ul>
-            <p class="deliverables-note">Deliverables are tailored to the scope and requirements of each project.</p>
-        </div>
-    </section>
+                    <article class="portfolio-card">
+                        <div class="image-wrapper portfolio-img">
+                            <img src="./assets/portfolio/watch-commercial.jpg" loading="lazy" alt="Premium Watch Advertisement" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="img-fallback" style="display:none;">Creative Visual Coming Soon</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="category">PRODUCT ADVERTISING</span>
+                            <h3>Premium Watch Advertisement</h3>
+                        </div>
+                    </article>
 
-    <!-- Who It's For Section -->
-    <section class="target-audience-section section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Built for Brands That Want to Stand Out.</h2>
-                <p class="section-subtitle">We can create advertising content for...</p>
-            </div>
-            <div class="audience-grid grid-4-col">
-                <div class="audience-item">Product Brands</div>
-                <div class="audience-item">Food &amp; Restaurants</div>
-                <div class="audience-item">Fashion &amp; Lifestyle</div>
-                <div class="audience-item">Real Estate</div>
-                <div class="audience-item">E-commerce</div>
-                <div class="audience-item">Startups</div>
-                <div class="audience-item">Local Businesses</div>
-                <div class="audience-item">Service Brands</div>
-            </div>
-        </div>
-    </section>
+                    <article class="portfolio-card">
+                        <div class="image-wrapper portfolio-img">
+                            <img src="./assets/portfolio/restaurant-commercial.jpg" loading="lazy" alt="Restaurant Food Commercial" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="img-fallback" style="display:none;">Creative Visual Coming Soon</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="category">SOCIAL MEDIA CONTENT</span>
+                            <h3>Restaurant Food Commercial</h3>
+                        </div>
+                    </article>
 
-    <!-- Final CTA Section -->
-    <section class="final-cta-section section">
-        <div class="container cta-container">
-            <span class="eyebrow">READY TO CREATE?</span>
-            <h2>Have a Product Worth Showing Off?</h2>
-            <p class="cta-text">Tell us what you're building and what you want to promote. We'll help shape the creative direction.</p>
-            <div class="cta-actions">
-                <a href="contact.html" class="btn btn-primary">START A PROJECT</a>
-                <a href="work.html" class="btn btn-secondary">VIEW OUR WORK</a>
-            </div>
-        </div>
-    </section>
+                    <article class="portfolio-card">
+                        <div class="image-wrapper portfolio-img">
+                            <img src="./assets/portfolio/real-estate.jpg" loading="lazy" alt="Luxury Real Estate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="img-fallback" style="display:none;">Creative Visual Coming Soon</div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="category">CAMPAIGN VISUAL</span>
+                            <h3>Luxury Real Estate</h3>
+                        </div>
+                    </article>
 
-    <!-- Footer -->
-    <footer class="site-footer">
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-heading">From Idea to Final Creative</h2>
+                <div class="process-flex">
+                    <div class="process-step">
+                        <span class="step-num">01</span>
+                        <h4>Brief</h4>
+                        <p>We understand the product, audience and campaign objective.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-num">02</span>
+                        <h4>Creative Direction</h4>
+                        <p>We develop the visual concept, mood and storytelling direction.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-num">03</span>
+                        <h4>AI Production</h4>
+                        <p>We create the required images, video scenes and campaign assets.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-num">04</span>
+                        <h4>Refinement</h4>
+                        <p>We refine visuals, motion, composition and brand details.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="step-num">05</span>
+                        <h4>Delivery</h4>
+                        <p>Final content is prepared for web, social media and advertising campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY AI ADVERTISING -->
+        <section class="section section-darker">
+            <div class="container">
+                <h2 class="section-heading">Why Use AI for Creative Production?</h2>
+                <div class="grid-2">
+                    <div class="benefit-card">
+                        <h3>Faster Production</h3>
+                        <p>Create campaign concepts and visual assets faster than traditional production workflows.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Lower Production Cost</h3>
+                        <p>Reduce the cost and complexity associated with conventional photo and video production.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>More Creative Possibilities</h3>
+                        <p>Explore visual concepts that would be difficult or expensive to produce traditionally.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <h3>Built for Digital</h3>
+                        <p>Create content specifically designed for websites, social media and digital campaigns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO WE HELP & DELIVERABLES -->
+        <section class="section">
+            <div class="container dual-section">
+                
+                <div class="half-section">
+                    <h2 class="section-heading">Built for Modern Businesses</h2>
+                    <div class="tags-container">
+                        <span class="tag">E-commerce Brands</span>
+                        <span class="tag">Restaurants & Cafés</span>
+                        <span class="tag">Real Estate</span>
+                        <span class="tag">Fashion & Lifestyle</span>
+                        <span class="tag">Local Businesses</span>
+                        <span class="tag">Startups</span>
+                        <span class="tag">Product Brands</span>
+                        <span class="tag">Service Businesses</span>
+                    </div>
+                </div>
+
+                <div class="half-section">
+                    <h2 class="section-heading">What You Can Get</h2>
+                    <ul class="deliverables-list">
+                        <li>AI Product Images</li>
+                        <li>Social Media Creatives</li>
+                        <li>Short Promotional Videos</li>
+                        <li>Product Advertisements</li>
+                        <li>Campaign Visuals</li>
+                        <li>Instagram Reels</li>
+                        <li>Website Visuals</li>
+                        <li>Brand Promotional Content</li>
+                    </ul>
+                    <p class="deliverables-note">Every project is tailored to the product, audience and campaign objective.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="section cta-section">
+            <div class="container cta-container">
+                <h2>Have a Product Worth Showing?</h2>
+                <p>Let's turn it into creative people remember.</p>
+                <div class="cta-buttons">
+                    <a href="./contact.html" class="btn btn-primary btn-lg">START A PROJECT</a>
+                    <a href="https://wa.me/919400977424" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <a href="index.html" class="brand-logo">TechUpdates.</a>
-                <p>AI-powered creative product advertising and visual production service.</p>
+                <a href="./index.html" class="footer-logo">TechUpdates.</a>
+                <p>AI-powered advertising, cinematic product content and professional digital solutions for modern businesses.</p>
             </div>
-            <div class="footer-nav">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Services</a></li>
-                    <li><a href="ai-advertising.html">AI Advertising</a></li>
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <nav>
+                    <a href="./index.html">Home</a>
+                    <a href="./ai-advertising.html">AI Advertising</a>
+                    <a href="./index.html#work">Work</a>
+                    <a href="./index.html#products">Products</a>
+                    <a href="./index.html#about">About</a>
+                    <a href="./contact.html">Start a Project</a>
+                </nav>
             </div>
-            <div class="footer-services">
-                <h4>Creative Services</h4>
-                <ul>
-                    <li><a href="ai-advertising.html">AI Product Advertising</a></li>
-                    <li><a href="ai-advertising.html">AI Video Ads</a></li>
-                    <li><a href="ai-advertising.html">Social Media Reels</a></li>
-                    <li><a href="ai-advertising.html">Product Visuals</a></li>
-                    <li><a href="ai-advertising.html">Brand Campaigns</a></li>
-                </ul>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <a href="https://wa.me/919400977424" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    WhatsApp: +91 94009 77424
+                </a>
             </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2024 TechUpdates. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="./main.js"></script>
 </body>
 </html>
