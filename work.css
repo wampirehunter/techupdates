@@ -1,0 +1,533 @@
+/* =========================================================
+   TECHUPDATES — WORK PAGE
+   PAGE-SCOPED ONLY
+   Does NOT modify the global website design.
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.work-page .work-hero {
+    padding: 120px 0 90px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-page .work-hero-inner {
+    max-width: 900px;
+}
+
+.work-page .work-eyebrow {
+    margin-bottom: 18px;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.work-page .work-hero h1 {
+    margin: 0;
+    max-width: 850px;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.work-page .work-hero p {
+    margin: 30px 0 0;
+    max-width: 680px;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.work-page .work-intro {
+    padding: 100px 0 55px;
+}
+
+.work-page .work-intro-grid {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1.2fr);
+    gap: 70px;
+    align-items: start;
+}
+
+.work-page .work-intro h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.work-page .work-intro p {
+    margin: 0;
+    max-width: 650px;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PORTFOLIO GRID
+   ========================================================= */
+
+.work-page .work-portfolio {
+    padding: 20px 0 120px;
+}
+
+.work-page .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 80px 28px;
+}
+
+
+/* =========================================================
+   PROJECT
+   ========================================================= */
+
+.work-page .work-project {
+    min-width: 0;
+}
+
+.work-page .work-project-image {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--bg-secondary);
+}
+
+.work-page .work-project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transition:
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-page .work-project:hover .work-project-image img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   PROJECT INFORMATION
+   ========================================================= */
+
+.work-page .work-project-info {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 20px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border-color);
+    margin-top: 0;
+}
+
+.work-page .work-project-number {
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+.work-page .work-project-category {
+    display: block;
+    margin-bottom: 9px;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.work-page .work-project h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.work-page .work-project p {
+    margin: 14px 0 0;
+    max-width: 520px;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FEATURED WORK
+   ========================================================= */
+
+.work-page .work-featured {
+    padding: 120px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-page .work-featured-header {
+    max-width: 800px;
+    margin-bottom: 45px;
+}
+
+.work-page .work-featured-header h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.035em;
+}
+
+.work-page .work-featured-header p {
+    margin: 25px 0 0;
+    max-width: 680px;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.work-page .work-featured-image {
+    width: 100%;
+    aspect-ratio: 16 / 7;
+    overflow: hidden;
+    background: var(--bg-secondary);
+}
+
+.work-page .work-featured-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+
+.work-page .work-services {
+    padding: 120px 0;
+}
+
+.work-page .work-section-heading {
+    display: grid;
+    grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1.2fr);
+    gap: 70px;
+    align-items: start;
+    margin-bottom: 45px;
+}
+
+.work-page .work-section-heading .work-eyebrow {
+    margin: 0;
+}
+
+.work-page .work-section-heading h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.work-page .work-capability-list {
+    border-top: 1px solid var(--border-color);
+}
+
+.work-page .work-capability {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 20px;
+    align-items: center;
+    min-height: 78px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-page .work-capability span {
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+}
+
+.work-page .work-capability strong {
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   APPROACH
+   ========================================================= */
+
+.work-page .work-approach {
+    padding: 120px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.work-page .work-approach-intro {
+    max-width: 800px;
+}
+
+.work-page .work-approach-intro h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.work-page .work-approach-intro p {
+    margin: 25px 0 0;
+    max-width: 700px;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.work-page .work-approach-list {
+    margin-top: 70px;
+    border-top: 1px solid var(--border-color);
+}
+
+.work-page .work-approach-item {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr);
+    gap: 30px;
+    padding: 35px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.work-page .work-approach-item > span {
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.work-page .work-approach-item h3 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+}
+
+.work-page .work-approach-item p {
+    margin: 9px 0 0;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.work-page .work-cta {
+    padding: 160px 0;
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.work-page .work-cta-inner {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.work-page .work-cta .work-eyebrow {
+    margin-bottom: 22px;
+}
+
+.work-page .work-cta h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+}
+
+.work-page .work-cta p {
+    max-width: 600px;
+    margin: 28px auto 35px;
+    color: var(--text-secondary);
+    font-family: var(--font-body);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER CONTACT
+   ========================================================= */
+
+.work-page .footer-contact a {
+    display: block;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1023px) {
+
+    .work-page .work-hero {
+        padding: 100px 0 75px;
+    }
+
+    .work-page .work-intro-grid,
+    .work-page .work-section-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .work-page .work-grid {
+        gap: 60px 22px;
+    }
+
+    .work-page .work-featured,
+    .work-page .work-services,
+    .work-page .work-approach {
+        padding: 90px 0;
+    }
+
+    .work-page .work-cta {
+        padding: 120px 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .work-page .work-hero {
+        padding: 80px 0 60px;
+    }
+
+    .work-page .work-hero h1 {
+        font-size: clamp(2.7rem, 12vw, 4.2rem);
+    }
+
+    .work-page .work-hero p {
+        margin-top: 22px;
+        font-size: 1rem;
+    }
+
+
+    .work-page .work-intro {
+        padding: 70px 0 35px;
+    }
+
+    .work-page .work-intro h2 {
+        font-size: 2rem;
+    }
+
+
+    .work-page .work-portfolio {
+        padding: 20px 0 80px;
+    }
+
+    .work-page .work-grid {
+        grid-template-columns: 1fr;
+        gap: 65px;
+    }
+
+
+    .work-page .work-project-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .work-page .work-project-info {
+        grid-template-columns: 35px minmax(0, 1fr);
+        gap: 14px;
+        padding-top: 18px;
+    }
+
+
+    .work-page .work-featured {
+        padding: 80px 0;
+    }
+
+    .work-page .work-featured-header {
+        margin-bottom: 30px;
+    }
+
+    .work-page .work-featured-image {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .work-page .work-services {
+        padding: 80px 0;
+    }
+
+    .work-page .work-capability {
+        grid-template-columns: 40px minmax(0, 1fr);
+        min-height: 70px;
+    }
+
+
+    .work-page .work-approach {
+        padding: 80px 0;
+    }
+
+    .work-page .work-approach-list {
+        margin-top: 50px;
+    }
+
+    .work-page .work-approach-item {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 15px;
+        padding: 28px 0;
+    }
+
+
+    .work-page .work-cta {
+        padding: 100px 0;
+    }
+
+    .work-page .work-cta h2 {
+        font-size: clamp(2.8rem, 13vw, 4.5rem);
+    }
+
+}
