@@ -3,204 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selected Work | TechUpdates</title>
-    <meta name="description" content="A selection of AI-powered advertising concepts, product visuals, campaign creatives and digital experiences produced by TechUpdates.">
-    
+
+    <title>Work | TechUpdates</title>
+
+    <meta
+        name="description"
+        content="Selected creative work by TechUpdates including AI advertising, product visuals, social media content and campaign visuals."
+    >
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- MASTER STYLESHEET -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- MASTER WEBSITE CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- WORK PAGE ONLY CSS -->
+    <link rel="stylesheet" href="work.css">
 </head>
+
 <body class="work-page">
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <header class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">TechUpdates.</a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="ai-advertising.html">AI Advertising</a>
-                <a href="work.html" class="active">Work</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-            </div>
-            <a href="contact.html" class="btn btn-primary">Start a Project</a>
-            
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+
+            <a href="index.html" class="brand-logo">
+                TechUpdates.
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="ai-advertising.html">
+                    AI Advertising
+                </a>
+
+                <a href="work.html" class="active">
+                    Work
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </nav>
+
+            <a href="contact.html" class="btn btn-primary">
+                Start a Project
+            </a>
+
+            <button
+                class="mobile-menu-btn"
+                aria-label="Toggle Menu"
+                type="button"
+            >
                 <span></span>
                 <span></span>
             </button>
-        </div>
-    </nav>
 
-    <!-- HERO SECTION -->
-    <header class="work-hero">
-        <div class="container">
-            <span class="eyebrow">SELECTED WORK</span>
-            <h1>Creative Work<br>Built to Get Noticed.</h1>
-            <p>A selection of product advertising, social content, campaign visuals and digital creative produced by TechUpdates.</p>
         </div>
     </header>
 
-    <!-- PORTFOLIO INTRO -->
-    <section class="work-intro-section">
-        <div class="container">
-            <h2>Selected Creative Work</h2>
-            <p>From cinematic product visuals to campaign-ready content, we create visual work designed for modern digital platforms.</p>
-        </div>
-    </section>
 
-    <!-- PROJECT GRID -->
-    <section class="work-grid-section">
-        <div class="container">
-            <div class="work-grid">
-                
-                <!-- Project 01 -->
-                <div class="work-card">
-                    <div class="work-image-wrapper">
-                        <img src="assets/portfolio/perfume-commercial.jpg" alt="Luxury Perfume Commercial" class="work-image">
-                    </div>
-                    <div class="work-content">
-                        <span class="work-category">AI PRODUCT ADVERTISING</span>
-                        <h3>Luxury Perfume Commercial</h3>
-                        <p>Cinematic product advertising created to present a premium fragrance with a strong visual identity.</p>
-                    </div>
+    <main>
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section class="work-hero">
+            <div class="container work-hero-inner">
+
+                <div class="work-eyebrow">
+                    SELECTED WORK
                 </div>
 
-                <!-- Project 02 -->
-                <div class="work-card">
-                    <div class="work-image-wrapper">
-                        <img src="assets/portfolio/watch-commercial.jpg" alt="Premium Watch Advertisement" class="work-image">
-                    </div>
-                    <div class="work-content">
-                        <span class="work-category">PRODUCT ADVERTISING</span>
-                        <h3>Premium Watch Advertisement</h3>
-                        <p>A premium product visual designed around detail, material, lighting and luxury positioning.</p>
-                    </div>
-                </div>
+                <h1>
+                    Creative Work<br>
+                    Built to Get Noticed.
+                </h1>
 
-                <!-- Project 03 -->
-                <div class="work-card">
-                    <div class="work-image-wrapper">
-                        <img src="assets/portfolio/restaurant-commercial.jpg" alt="Restaurant Food Commercial" class="work-image">
-                    </div>
-                    <div class="work-content">
-                        <span class="work-category">SOCIAL MEDIA CONTENT</span>
-                        <h3>Restaurant Food Commercial</h3>
-                        <p>Appetite-driven food imagery designed for restaurant promotion, social media and digital campaigns.</p>
-                    </div>
-                </div>
+                <p>
+                    A selection of product advertising, social content,
+                    campaign visuals and digital creative produced by
+                    TechUpdates.
+                </p>
 
-                <!-- Project 04 -->
-                <div class="work-card">
-                    <div class="work-image-wrapper">
-                        <img src="assets/portfolio/luxury-real-estate.jpg" alt="Luxury Real Estate" class="work-image">
-                    </div>
-                    <div class="work-content">
-                        <span class="work-category">CAMPAIGN VISUAL</span>
-                        <h3>Luxury Real Estate</h3>
-                        <p>A cinematic real-estate visual focused on architecture, atmosphere, location and premium lifestyle positioning.</p>
-                    </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             INTRO
+             ================================================= -->
+
+        <section class="work-intro">
+            <div class="container">
+
+                <div class="work-intro-grid">
+
+                    <h2>
+                        Selected Creative Work
+                    </h2>
+
+                    <p>
+                        From cinematic product visuals to campaign-ready
+                        content, we create visual work designed for modern
+                        digital platforms.
+                    </p>
+
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FEATURED PROJECT -->
-    <section class="featured-work">
-        <div class="container">
-            <div class="featured-header">
-                <h2>One Idea.<br>Many Possibilities.</h2>
-                <p>A strong creative concept can become product advertising, social media content, campaign visuals and digital experiences across multiple platforms.</p>
-            </div>
-            <div class="featured-visual">
-                <img src="assets/portfolio/perfume-commercial.jpg" alt="Featured Visual Concept">
-            </div>
-        </div>
-    </section>
 
-    <!-- WHAT WE CREATE -->
-    <section class="work-list-section">
-        <div class="container">
-            <h2>What We Create</h2>
-            <ul class="work-list">
-                <li>AI Product Advertising</li>
-                <li>Product Photography &amp; Visuals</li>
-                <li>Social Media Creatives</li>
-                <li>Short Promotional Videos</li>
-                <li>Campaign Visuals</li>
-                <li>Instagram Reels</li>
-                <li>Website Visuals</li>
-                <li>Brand Promotional Content</li>
-            </ul>
-        </div>
-    </section>
+        <!-- =================================================
+             PORTFOLIO
+             ================================================= -->
 
-    <!-- OUR APPROACH -->
-    <section class="approach-section">
-        <div class="container">
-            <h2 style="font-size: 2rem; font-weight: 600; color: #fff;">More Than Just Visuals.</h2>
-            <p style="color: #a0a0a0; font-size: 1.1rem; max-width: 700px; margin-top: 1rem; line-height: 1.6;">Every project starts with understanding the product, audience and objective. We then develop the visual direction and produce content designed for the platform where it will be used.</p>
-            
-            <div class="approach-grid">
-                <div class="approach-card">
-                    <span>01 — Strategy</span>
-                    <h3>Strategy &amp; Objective</h3>
-                    <p>Understand the product, audience and objective.</p>
+        <section class="work-portfolio">
+            <div class="container">
+
+                <div class="work-grid">
+
+                    <!-- PROJECT 01 -->
+                    <article class="work-project">
+
+                        <div class="work-project-image">
+                            <img
+                                src="assets/portfolio/perfume-commercial.jpg"
+                                alt="Luxury Perfume Commercial"
+                            >
+                        </div>
+
+                        <div class="work-project-info">
+
+                            <span class="work-project-number">
+                                01
+                            </span>
+
+                            <div>
+                                <span class="work-project-category">
+                                    AI PRODUCT ADVERTISING
+                                </span>
+
+                                <h3>
+                                    Luxury Perfume Commercial
+                                </h3>
+
+                                <p>
+                                    Cinematic product advertising created
+                                    to present a premium fragrance with a
+                                    strong visual identity.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 02 -->
+                    <article class="work-project">
+
+                        <div class="work-project-image">
+                            <img
+                                src="assets/portfolio/watch-commercial.jpg"
+                                alt="Premium Watch Advertisement"
+                            >
+                        </div>
+
+                        <div class="work-project-info">
+
+                            <span class="work-project-number">
+                                02
+                            </span>
+
+                            <div>
+                                <span class="work-project-category">
+                                    PRODUCT ADVERTISING
+                                </span>
+
+                                <h3>
+                                    Premium Watch Advertisement
+                                </h3>
+
+                                <p>
+                                    A premium product visual designed
+                                    around detail, material, lighting
+                                    and luxury positioning.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 03 -->
+                    <article class="work-project">
+
+                        <div class="work-project-image">
+                            <img
+                                src="assets/portfolio/restaurant-commercial.jpg"
+                                alt="Restaurant Food Commercial"
+                            >
+                        </div>
+
+                        <div class="work-project-info">
+
+                            <span class="work-project-number">
+                                03
+                            </span>
+
+                            <div>
+                                <span class="work-project-category">
+                                    SOCIAL MEDIA CONTENT
+                                </span>
+
+                                <h3>
+                                    Restaurant Food Commercial
+                                </h3>
+
+                                <p>
+                                    Appetite-driven food imagery designed
+                                    for restaurant promotion, social media
+                                    and digital campaigns.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 04 -->
+                    <article class="work-project">
+
+                        <div class="work-project-image">
+                            <img
+                                src="assets/portfolio/luxury-real-estate.jpg"
+                                alt="Luxury Real Estate"
+                            >
+                        </div>
+
+                        <div class="work-project-info">
+
+                            <span class="work-project-number">
+                                04
+                            </span>
+
+                            <div>
+                                <span class="work-project-category">
+                                    CAMPAIGN VISUAL
+                                </span>
+
+                                <h3>
+                                    Luxury Real Estate
+                                </h3>
+
+                                <p>
+                                    A cinematic real-estate visual focused
+                                    on architecture, atmosphere, location
+                                    and premium lifestyle positioning.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </article>
+
                 </div>
-                <div class="approach-card">
-                    <span>02 — Creative Direction</span>
-                    <h3>Visual Direction</h3>
-                    <p>Build the visual concept, mood and storytelling direction.</p>
-                </div>
-                <div class="approach-card">
-                    <span>03 — Production</span>
-                    <h3>Polished Assets</h3>
-                    <p>Create polished visual assets ready for digital use.</p>
-                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FINAL CTA -->
-    <section class="work-cta">
-        <div class="container">
-            <h2>Have Something<br>Worth Showing?</h2>
-            <p>Let's create visuals that make your business impossible to ignore.</p>
-            <a href="contact.html" class="btn btn-primary btn-large">START A PROJECT</a>
-        </div>
-    </section>
 
-    <!-- FOOTER -->
+        <!-- =================================================
+             FEATURED
+             ================================================= -->
+
+        <section class="work-featured">
+            <div class="container">
+
+                <div class="work-featured-header">
+
+                    <div class="work-eyebrow">
+                        FEATURED APPROACH
+                    </div>
+
+                    <h2>
+                        One Idea.<br>
+                        Many Possibilities.
+                    </h2>
+
+                    <p>
+                        A strong creative concept can become product
+                        advertising, social media content, campaign
+                        visuals and digital experiences across multiple
+                        platforms.
+                    </p>
+
+                </div>
+
+
+                <div class="work-featured-image">
+
+                    <img
+                        src="assets/portfolio/perfume-commercial.jpg"
+                        alt="Featured TechUpdates creative"
+                    >
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             WHAT WE CREATE
+             ================================================= -->
+
+        <section class="work-services">
+            <div class="container">
+
+                <div class="work-section-heading">
+                    <div class="work-eyebrow">
+                        CAPABILITIES
+                    </div>
+
+                    <h2>
+                        What We Create
+                    </h2>
+                </div>
+
+
+                <div class="work-capability-list">
+
+                    <div class="work-capability">
+                        <span>01</span>
+                        <strong>AI Product Advertising</strong>
+                    </div>
+
+                    <div class="work-capability">
+                        <span>02</span>
+                        <strong>Product Photography &amp; Visuals</strong>
+                    </div>
+
+                    <div class="work-capability">
+                        <span>03</span>
+                        <strong>Social Media Creatives</strong>
+                    </div>
+
+                    <div class="work-capability">
+                        <span>04</span>
+                        <strong>Short Promotional Videos</strong>
+                    </div>
+
+                    <div class="work-capability">
+                        <span>05</span>
+                        <strong>Campaign Visuals</strong>
+                    </div>
+
+                    <div class="work-capability">
+                        <span>06</span>
+                        <strong>Instagram Reels</strong>
+                    </div>
+
+                    <div class="work-capability">
+                        <span>07</span>
+                        <strong>Website Visuals</strong>
+                    </div>
+
+                    <div class="work-capability">
+                        <span>08</span>
+                        <strong>Brand Promotional Content</strong>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             APPROACH
+             ================================================= -->
+
+        <section class="work-approach">
+            <div class="container">
+
+                <div class="work-approach-intro">
+
+                    <div class="work-eyebrow">
+                        OUR APPROACH
+                    </div>
+
+                    <h2>
+                        More Than Just Visuals.
+                    </h2>
+
+                    <p>
+                        Every project starts with understanding the product,
+                        audience and objective. We then develop the visual
+                        direction and produce content designed for the
+                        platform where it will be used.
+                    </p>
+
+                </div>
+
+
+                <div class="work-approach-list">
+
+                    <div class="work-approach-item">
+
+                        <span>01</span>
+
+                        <div>
+                            <h3>
+                                Strategy
+                            </h3>
+
+                            <p>
+                                Understand the product, audience and
+                                campaign objective.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="work-approach-item">
+
+                        <span>02</span>
+
+                        <div>
+                            <h3>
+                                Creative Direction
+                            </h3>
+
+                            <p>
+                                Build the visual concept, mood and
+                                storytelling direction.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="work-approach-item">
+
+                        <span>03</span>
+
+                        <div>
+                            <h3>
+                                Production
+                            </h3>
+
+                            <p>
+                                Create polished visual assets ready
+                                for digital use.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             CTA
+             ================================================= -->
+
+        <section class="work-cta">
+            <div class="container">
+
+                <div class="work-cta-inner">
+
+                    <div class="work-eyebrow">
+                        START SOMETHING
+                    </div>
+
+                    <h2>
+                        Have Something<br>
+                        Worth Showing?
+                    </h2>
+
+                    <p>
+                        Let's create visuals that make your business
+                        impossible to ignore.
+                    </p>
+
+                    <a
+                        href="contact.html"
+                        class="btn btn-primary"
+                    >
+                        Start a Project
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
     <footer class="site-footer">
+
         <div class="container footer-grid">
+
             <div class="footer-brand">
-                <h3>TechUpdates.</h3>
-                <p>Creative &amp; Technology Agency</p>
+
+                <h3>
+                    TechUpdates.
+                </h3>
+
+                <p>
+                    Creative &amp; Technology Agency
+                </p>
+
             </div>
+
+
             <div class="footer-links">
-                <h4>Quick Links</h4>
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="ai-advertising.html">AI Advertising</a>
-                <a href="work.html">Work</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
+
+                <h4>
+                    Quick Links
+                </h4>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="services.html">
+                    Services
+                </a>
+
+                <a href="ai-advertising.html">
+                    AI Advertising
+                </a>
+
+                <a href="work.html">
+                    Work
+                </a>
+
+                <a href="products.html">
+                    Products
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
             </div>
+
+
             <div class="footer-contact">
-                <h4>Contact</h4>
-                <a href="https://wa.me/919400977424?text=Hi%20TechUpdates,%20I'm%20interested%20in%20your%20creative%20services.">WhatsApp</a>
-                <a href="tel:+919400977424">Mobile</a>
+
+                <h4>
+                    Contact
+                </h4>
+
+                <a
+                    href="https://wa.me/919400977424?text=Hi%20TechUpdates,%20I'm%20interested%20in%20your%20creative%20services."
+                >
+                    WhatsApp
+                </a>
+
+                <a href="tel:+919400977424">
+                    9400977424
+                </a>
+
             </div>
+
         </div>
+
+
         <div class="container footer-bottom">
-            <p>&copy; 2026 TechUpdates. All rights reserved.</p>
+
+            <p>
+                &copy; 2026 TechUpdates. All rights reserved.
+            </p>
+
         </div>
+
     </footer>
+
+
+    <!-- Existing JavaScript -->
+    <script src="main.js"></script>
 
 </body>
 </html>
