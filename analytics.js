@@ -55,15 +55,20 @@
             screen_resolution: `${window.screen.width}x${window.screen.height}`
         };
 
+        // Suppress network POST on local test server to avoid 501 Unsupported Method error
+        if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+            return;
+        }
+
         // Fire-and-forget fetch to API
-        fetch("/api/track", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(payload),
-            keepalive: true
-        }).catch(() => {
-            // Silently ignore if running on pure static hosting
-        });
+        try {
+            fetch("/api/track.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+                keepalive: true
+            }).catch(() => {});
+        } catch (e) {}
     }
 
     // 5. PUBLIC EXPORTS FOR INQUIRY FORM & WHATSAPP
