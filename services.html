@@ -3,140 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | TechUpdates</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Services | TechUpdates - Website Development, Cloud Hosting & Apps</title>
+    <meta name="description" content="Explore our professional services: Custom Website Development, Managed Cloud Hosting, Mobile App MVPs, and Speed Optimization.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="analytics.js"></script>
 </head>
-<body class="services-page">
+<body>
 
-    <nav class="navbar">
+    <!-- Minimal Top Loading Line -->
+    <div id="preloader"><div class="preloader-bar"></div></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">TechUpdates.</a>
-            <div class="nav-links">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="TechUpdates" style="height: 28px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
+                <span>TechUpdates.</span>
+                <span class="brand-badge">STUDIO</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="services.html" class="active">Services</a>
-                <a href="ai-advertising.html">AI Advertising</a>
-                <a href="work.html">Work</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-            </div>
-            <a href="contact.html" class="btn btn-primary">Start a Project</a>
-        </div>
-    </nav>
+                <a href="templates.html">Live Demos</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="store.html">Templates</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-    <header class="inner-hero">
-        <div class="container">
-            <span class="eyebrow">WHAT WE DO</span>
-            <h1>Creative Technology Built for Modern Business.</h1>
-            <p>We combine creative thinking, AI-powered production and digital technology to create work that helps businesses get noticed and grow.</p>
-            <div class="hero-actions">
-                <a href="contact.html" class="btn btn-primary">Start a Project</a>
-                <a href="work.html" class="btn btn-secondary">View Our Work</a>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
+                <button class="mobile-toggle" id="mobileToggle">☰</button>
             </div>
         </div>
     </header>
 
-    <section class="section-padding bg-darker">
+    <!-- Hero -->
+    <section class="hero text-center" style="padding: 4.5rem 0 3rem;">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="numbered-grid">
-                <div class="numbered-card">
-                    <span>01</span>
-                    <h3>AI Advertising & Creative Production</h3>
-                    <p>AI-powered product visuals, advertising concepts, campaign creatives and short-form promotional content.</p>
+            <span class="section-tag">SERVICES</span>
+            <h1 class="hero-title">Engineering for <span class="accent-text">Modern Web & Mobile</span></h1>
+            <p class="hero-subtitle">From high-converting corporate websites to managed cloud infrastructure and custom apps, we build digital solutions that deliver measurable business results.</p>
+        </div>
+    </section>
+
+    <!-- Services Detailed Breakdown -->
+    <section class="section-padding bg-subtle">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrap">🌐</div>
+                    <h3>Custom Website Development</h3>
+                    <p>We build tailor-made, hand-coded websites that load instantly, rank on Google, and convert visitors into paying clients.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Corporate & Business Consulting Websites</li>
+                        <li><span class="check-icon">✓</span> High-Conversion Landing Pages</li>
+                        <li><span class="check-icon">✓</span> E-Commerce & Retail Storefronts</li>
+                        <li><span class="check-icon">✓</span> Zero Bloat / 100% Mobile Responsive</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-secondary btn-sm">View Website Pricing</a>
                 </div>
-                <div class="numbered-card">
-                    <span>02</span>
-                    <h3>Web Design & Development</h3>
-                    <p>Modern websites and digital experiences designed around business goals, performance and usability.</p>
+
+                <div class="service-card">
+                    <div class="service-icon-wrap">☁️</div>
+                    <h3>Managed Cloud Hosting & CDN</h3>
+                    <p>Keep your website online 24/7 with global edge caching, enterprise SSD speed, and automated backups.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Sub-second Global Edge CDN Delivery</li>
+                        <li><span class="check-icon">✓</span> Free Wildcard SSL Encryption</li>
+                        <li><span class="check-icon">✓</span> Automated Daily / Weekly Backups</li>
+                        <li><span class="check-icon">✓</span> 99.9% High Availability SLA</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-secondary btn-sm">Explore Hosting Plans</a>
                 </div>
-                <div class="numbered-card">
-                    <span>03</span>
-                    <h3>AI Product Visuals</h3>
-                    <p>High-quality product imagery and visual concepts created without traditional studio production.</p>
+
+                <div class="service-card">
+                    <div class="service-icon-wrap">📱</div>
+                    <h3>Mobile & Web Application MVPs</h3>
+                    <p>Turn your product vision into a functional mobile app (iOS & Android) or custom web application dashboard.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Cross-Platform iOS & Android Apps</li>
+                        <li><span class="check-icon">✓</span> Client Portals & SaaS Dashboards</li>
+                        <li><span class="check-icon">✓</span> Serverless Edge Database Integration</li>
+                        <li><span class="check-icon">✓</span> RESTful API Engineering</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary btn-sm">Request App Quote</a>
                 </div>
-                <div class="numbered-card">
-                    <span>04</span>
-                    <h3>Social Media Creative</h3>
-                    <p>Scroll-stopping social media visuals, promotional creatives and short-form content.</p>
+
+                <div class="service-card">
+                    <div class="service-icon-wrap">⚡</div>
+                    <h3>Website Speed & Core Web Vitals</h3>
+                    <p>Is your existing website sluggish? We rebuild and optimize code to achieve 90-100 Google PageSpeed scores.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> CSS / JS Minification & Optimization</li>
+                        <li><span class="check-icon">✓</span> Next-Gen Image Formats (WebP/AVIF)</li>
+                        <li><span class="check-icon">✓</span> Core Web Vitals (LCP, FID, CLS) Audit</li>
+                        <li><span class="check-icon">✓</span> Server Response Time Reduction</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary btn-sm">Request Speed Audit</a>
                 </div>
-                <div class="numbered-card">
-                    <span>05</span>
-                    <h3>Brand & Campaign Content</h3>
-                    <p>Campaign visuals, launch creatives and digital brand assets built around a consistent visual direction.</p>
+
+                <div class="service-card">
+                    <div class="service-icon-wrap">🎯</div>
+                    <h3>Facebook Ads & Conversion Tracking</h3>
+                    <p>Every website we build is configured with conversion tracking, Meta Pixel, and attribution data capture.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Facebook Click ID (fbclid) Attribution</li>
+                        <li><span class="check-icon">✓</span> UTM Campaign Source Tagging</li>
+                        <li><span class="check-icon">✓</span> WhatsApp Direct Lead Capture</li>
+                        <li><span class="check-icon">✓</span> Secure Lead Management Database</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary btn-sm">Learn More</a>
                 </div>
-                <div class="numbered-card">
-                    <span>06</span>
-                    <h3>Business Digital Solutions</h3>
-                    <p>Practical digital solutions that improve how modern businesses present, communicate and operate online.</p>
+
+                <div class="service-card">
+                    <div class="service-icon-wrap">🛠️</div>
+                    <h3>Maintenance & Tech Support</h3>
+                    <p>Ongoing peace of mind with continuous security patches, content updates, and dedicated technical assistance.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Content & Design Revisions</li>
+                        <li><span class="check-icon">✓</span> Domain & DNS Health Monitoring</li>
+                        <li><span class="check-icon">✓</span> Security Scanning & Firewall Tuning</li>
+                        <li><span class="check-icon">✓</span> Direct WhatsApp Developer Support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-secondary btn-sm">Inquire Support</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding">
-        <div class="container">
-            <h2 class="section-title">How We Work</h2>
-            <div class="numbered-grid">
-                <div class="numbered-card">
-                    <span>01 — Understand</span>
-                    <p>We understand your business, audience and objective.</p>
-                </div>
-                <div class="numbered-card">
-                    <span>02 — Define</span>
-                    <p>We develop the creative direction, structure and visual approach.</p>
-                </div>
-                <div class="numbered-card">
-                    <span>03 — Create</span>
-                    <p>We produce the required design, AI visuals, content or digital experience.</p>
-                </div>
-                <div class="numbered-card">
-                    <span>04 — Refine</span>
-                    <p>We review, refine and align everything with the final objective.</p>
-                </div>
-                <div class="numbered-card">
-                    <span>05 — Deliver</span>
-                    <p>We prepare the final assets for web, social media, campaigns or business use.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding text-center bg-darker">
-        <div class="container">
-            <h2 class="section-title">Have a project in mind?</h2>
-            <p style="color: #a0a0a0; font-size: 1.2rem; margin-bottom: 2rem;">Let's build something worth noticing.</p>
-            <a href="contact.html" class="btn btn-primary btn-large">Start a Project</a>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>TechUpdates.</h3>
-                <p>Creative & Technology Agency</p>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="ai-advertising.html">AI Advertising</a>
-                <a href="work.html">Work</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <a href="https://wa.me/YOURNUMBER?text=Hi%20TechUpdates,%20I'm%20interested%20in%20starting%20a%20project.">WhatsApp</a> 
-                <a href="tel:YOURNUMBER">Mobile</a>
-            </div>
-        </div>
         <div class="container footer-bottom">
-            <p>&copy; 2026 TechUpdates. All rights reserved.</p>
+            <p>&copy; 2026 TechUpdates (techupdates.co.in). All rights reserved.</p>
+            <div>
+                <a href="index.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Home</a>
+                <a href="templates.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Live Demos</a>
+                <a href="pricing.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Pricing</a>
+                <a href="hosting.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Hosting</a>
+                <a href="store.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Store</a>
+                <a href="contact.html" style="color: var(--text-secondary);">Contact</a>
+            </div>
         </div>
     </footer>
 
+    <script src="main.js"></script>
 </body>
 </html>

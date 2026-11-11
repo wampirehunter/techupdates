@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Studio - Modern Apparel & Essentials (Demo)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #18181b;
+            --accent: #2563eb;
+            --bg: #fafafa;
+            --surface: #ffffff;
+            --border: #e4e4e7;
+            --text-dark: #09090b;
+            --text-muted: #71717a;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+        .top-banner { background: #09090b; color: #fff; text-align: center; padding: 0.5rem; font-size: 0.8rem; font-weight: 500; }
+        header { background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+        .brand { font-size: 1.3rem; font-weight: 800; letter-spacing: -0.5px; }
+        .cart-btn {
+            background: #f4f4f5; border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: 20px;
+            font-size: 0.85rem; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;
+        }
+        .cart-badge { background: var(--accent); color: #fff; border-radius: 50%; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.75rem; }
+        .hero { padding: 3rem 0 2rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+        .hero-text h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.75rem; letter-spacing: -1px; }
+        .hero-text p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 1.5rem; }
+        .filter-bar { display: flex; gap: 0.5rem; margin-bottom: 2rem; overflow-x: auto; padding-bottom: 0.5rem; }
+        .filter-btn { background: #fff; border: 1px solid var(--border); padding: 0.45rem 1rem; border-radius: 20px; font-size: 0.85rem; cursor: pointer; font-weight: 500; }
+        .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .product-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; transition: transform 0.2s, box-shadow 0.2s; }
+        .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(0,0,0,0.06); }
+        .product-img { width: 100%; height: 220px; object-fit: cover; background: #e2e8f0; }
+        .product-info { padding: 1rem; }
+        .product-category { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; }
+        .product-title { font-size: 1rem; font-weight: 700; margin: 0.25rem 0 0.5rem; }
+        .product-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem; }
+        .price { font-size: 1.1rem; font-weight: 800; color: #09090b; }
+        .add-btn { background: #09090b; color: #fff; border: none; padding: 0.45rem 0.9rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; }
+        .add-btn:hover { background: var(--accent); }
+        @media(max-width: 768px) {
+            .hero { flex-direction: column; text-align: center; }
+            .hero-text h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">Free Express Delivery on Orders Over $75 / ₹2,000</div>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="brand">LUXE.STUDIO</div>
+                <button class="cart-btn" onclick="alert('Demo: Cart system is ready for your custom store products!')">
+                    🛒 Cart <span class="cart-badge" id="cartCount">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Minimalist Essentials.<br>Engineered for Living.</h1>
+                <p>Designed with premium organic textures, precision tailoring, and timeless lines.</p>
+            </div>
+        </section>
+
+        <div class="filter-bar">
+            <button class="filter-btn active">All Items</button>
+            <button class="filter-btn">Apparel</button>
+            <button class="filter-btn">Accessories</button>
+            <button class="filter-btn">Footwear</button>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="../../assets/portfolio/luxury-real-estate.jpg" alt="Minimalist Jacket" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Outerwear</span>
+                    <h4 class="product-title">Technical Trench Coat</h4>
+                    <div class="product-footer">
+                        <span class="price">$149 / ₹3,499</span>
+                        <button class="add-btn" onclick="addToCart()">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../../assets/portfolio/watch-commercial.jpg" alt="Chrono Watch" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Timepieces</span>
+                    <h4 class="product-title">Sapphire Minimalist Watch</h4>
+                    <div class="product-footer">
+                        <span class="price">$220 / ₹5,999</span>
+                        <button class="add-btn" onclick="addToCart()">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../../assets/portfolio/perfume-commercial.jpg" alt="Luxe Fragrance" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Fragrance</span>
+                    <h4 class="product-title">Nordic Amber Eau De Parfum</h4>
+                    <div class="product-footer">
+                        <span class="price">$95 / ₹2,499</span>
+                        <button class="add-btn" onclick="addToCart()">+ Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="../../assets/portfolio/restaurant-food-commercial.jpg" alt="Artisan Blend" class="product-img">
+                <div class="product-info">
+                    <span class="product-category">Lifestyle</span>
+                    <h4 class="product-title">Single Origin Artisan Roast</h4>
+                    <div class="product-footer">
+                        <span class="price">$32 / ₹799</span>
+                        <button class="add-btn" onclick="addToCart()">+ Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+        function addToCart() {
+            count++;
+            document.getElementById('cartCount').innerText = count;
+        }
+    </script>
+</body>
+</html>

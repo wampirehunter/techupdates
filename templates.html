@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Website Demos & Template Showroom | TechUpdates</title>
+    <meta name="description" content="Test drive ready-to-deploy website templates and SaaS landing pages across Desktop, Tablet, and Mobile screens.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="analytics.js"></script>
+    <style>
+        .demo-page-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .template-meta-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .template-specs-list {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .spec-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .spec-value {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Top Loading Line -->
+    <div id="preloader"><div class="preloader-bar"></div></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="TechUpdates" style="height: 28px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
+                <span>TechUpdates.</span>
+                <span class="brand-badge">STUDIO</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="templates.html" class="active">Live Demos</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="store.html">Templates</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero text-center" style="padding: 4.5rem 0 2.5rem;">
+        <div class="container">
+            <span class="section-tag">LIVE DEMO SHOWROOM</span>
+            <h1 class="hero-title">Interactive <span class="accent-text">Template Demos</span></h1>
+            <p class="hero-subtitle">Test drive our production-ready website designs. Switch between Desktop, Tablet, and Mobile viewports to inspect how your future website will look on real client devices.</p>
+        </div>
+    </section>
+
+    <!-- Main Interactive Demo Showcase -->
+    <section class="section-padding bg-subtle" style="padding-top: 1.5rem;">
+        <div class="container">
+            <div class="demo-showcase">
+                <!-- Toolbar -->
+                <div class="demo-toolbar">
+                    <div class="template-tabs">
+                        <button class="tab-btn active" data-template="saas">SaaS & Technology</button>
+                        <button class="tab-btn" data-template="corporate">Corporate & Advisory</button>
+                        <button class="tab-btn" data-template="ecommerce">Boutique & Retail</button>
+                        <button class="tab-btn" data-template="restaurant">Restaurant & Dining</button>
+                    </div>
+
+                    <div class="device-switcher">
+                        <button class="device-btn active" data-device="desktop">💻 Desktop</button>
+                        <button class="device-btn" data-device="tablet">📱 Tablet</button>
+                        <button class="device-btn" data-device="mobile">📲 Mobile</button>
+                    </div>
+                </div>
+
+                <!-- Browser Mockup Frame -->
+                <div class="browser-mockup" id="browserMockup">
+                    <div class="browser-header">
+                        <div class="browser-dots">
+                            <span class="browser-dot red"></span>
+                            <span class="browser-dot yellow"></span>
+                            <span class="browser-dot green"></span>
+                        </div>
+                        <div class="browser-url-bar" id="browserUrl">https://nova-ai.techupdates.co.in</div>
+                        <div class="browser-actions">
+                            <a href="demos/saas/index.html" target="_blank" id="externalDemoLink">↗ Open Fullscreen Demo</a>
+                        </div>
+                    </div>
+                    <div class="demo-iframe-container" style="height: 650px;">
+                        <iframe src="demos/saas/index.html" id="demoIframe" class="demo-iframe" title="Interactive Website Demo"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Template Meta Information -->
+            <div class="template-meta-card" style="margin-top: 2rem;">
+                <div class="template-specs-list">
+                    <div class="spec-item">
+                        <span class="spec-label">Template Niche</span>
+                        <span class="spec-value" id="templateNiche">SaaS & Software Startup</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Target Conversion</span>
+                        <span class="spec-value" id="templateConversion">Free Trials / Demo Bookings</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Load Speed</span>
+                        <span class="spec-value" style="color: #059669;">0.8s (Grade A)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Customization</span>
+                        <span class="spec-value">Ready in 48 Hours</span>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="contact.html?package=Template+Customization" id="requestTemplateBtn" class="btn btn-primary">
+                        Deploy This Design for My Brand →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 TechUpdates (techupdates.co.in). All rights reserved.</p>
+            <div>
+                <a href="index.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Home</a>
+                <a href="services.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Services</a>
+                <a href="pricing.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Pricing</a>
+                <a href="hosting.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Hosting</a>
+                <a href="store.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Store</a>
+                <a href="contact.html" style="color: var(--text-secondary);">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Update template meta info when tab is clicked
+        const metaDetails = {
+            saas: { niche: "SaaS & Software Startup", conversion: "Free Trials & Product Signups" },
+            corporate: { niche: "Corporate, Legal & Advisory", conversion: "High-Ticket Client Consultations" },
+            ecommerce: { niche: "Boutique, Fashion & Retail", conversion: "Direct Orders & Cart Checkout" },
+            restaurant: { niche: "Restaurant, Bistro & Cafe", conversion: "Online Table Reservations & Menu" }
+        };
+
+        document.querySelectorAll(".tab-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                const key = btn.getAttribute("data-template");
+                if (metaDetails[key]) {
+                    document.getElementById("templateNiche").textContent = metaDetails[key].niche;
+                    document.getElementById("templateConversion").textContent = metaDetails[key].conversion;
+                    const reqBtn = document.getElementById("requestTemplateBtn");
+                    if (reqBtn) reqBtn.href = `contact.html?package=${encodeURIComponent(btn.textContent.trim() + " Template")}`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

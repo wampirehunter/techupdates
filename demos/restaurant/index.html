@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savor Bistro & Kitchen (Demo)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e07a5f;
+            --bg: #14110f;
+            --surface: #1e1b18;
+            --border: #2d2824;
+            --text-light: #f4f1de;
+            --text-muted: #a89f91;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 800; color: #fff; letter-spacing: 1px; }
+        .logo span { color: var(--primary); }
+        .btn-reserve { background: var(--primary); color: #fff; text-decoration: none; padding: 0.65rem 1.4rem; border-radius: 30px; font-weight: 600; font-size: 0.85rem; }
+        .hero { text-align: center; padding: 4rem 0 3rem; }
+        .hero-tag { color: var(--primary); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; font-weight: 800; margin: 1rem 0; line-height: 1.2; }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 580px; margin: 0 auto 2rem; }
+        .menu-preview { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; margin: 2rem 0; }
+        .menu-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; text-align: center; margin-bottom: 2rem; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .menu-item { border-bottom: 1px dashed var(--border); padding-bottom: 1rem; }
+        .item-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.25rem; }
+        .item-name { font-weight: 600; font-size: 1.05rem; }
+        .item-price { color: var(--primary); font-weight: 700; }
+        .item-desc { color: var(--text-muted); font-size: 0.85rem; }
+        @media(max-width: 768px) { h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">SAVOR <span>BISTRO</span></div>
+            <a href="javascript:void(0)" class="btn-reserve" onclick="alert('Demo: Online reservation form connected to your WhatsApp/Email!')">Book a Table</a>
+        </nav>
+
+        <section class="hero">
+            <span class="hero-tag">Culinary Craft & Woodfire Flavors</span>
+            <h1>Artisan Plates.<br>Unforgettable Nights.</h1>
+            <p>Locally sourced organic produce cooked over artisanal flame, paired with natural wines and crafted cocktails.</p>
+        </section>
+
+        <div class="menu-preview">
+            <h2 class="menu-title">Chef's Seasonal Tasting</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-head">
+                        <span class="item-name">Wood-Fired Truffle Gnocchi</span>
+                        <span class="item-price">$26 / ₹650</span>
+                    </div>
+                    <p class="item-desc">Handmade potato gnocchi, wild forest mushrooms, shaved black winter truffle.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-head">
+                        <span class="item-name">Cast-Iron Crusted Salmon</span>
+                        <span class="item-price">$34 / ₹850</span>
+                    </div>
+                    <p class="item-desc">Atlantic salmon, saffron infused risotto, blistered asparagus, lemon velouté.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-head">
+                        <span class="item-name">Smoked Burrata & Heirloom</span>
+                        <span class="item-price">$19 / ₹490</span>
+                    </div>
+                    <p class="item-desc">Artisanal burrata, heirloom tomatoes, aged balsamic reduction, toasted sourdough.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-head">
+                        <span class="item-name">Valrhona Dark Chocolate Ganache</span>
+                        <span class="item-price">$15 / ₹380</span>
+                    </div>
+                    <p class="item-desc">70% single origin cocoa, sea salt caramel crystals, espresso mascarpone gelato.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

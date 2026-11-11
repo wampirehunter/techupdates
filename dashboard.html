@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead & Ad Analytics Dashboard | TechUpdates</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dashboard-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .stat-box {
+            background-color: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            box-shadow: var(--shadow-sm);
+        }
+        .stat-box-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.35rem;
+        }
+        .stat-box-number {
+            font-family: var(--font-heading);
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+        .table-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        .table-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            text-align: left;
+        }
+        .data-table th {
+            background-color: #f8fafc;
+            padding: 0.85rem 1.25rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            border-bottom: 1px solid var(--border-light);
+        }
+        .data-table td {
+            padding: 0.85rem 1.25rem;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-primary);
+        }
+        .campaign-tag {
+            background-color: #eff6ff;
+            color: #2563eb;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Top Loading Line -->
+    <div id="preloader"><div class="preloader-bar"></div></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="TechUpdates" style="height: 28px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
+                <span>TechUpdates.</span>
+                <span class="brand-badge">ADMIN</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="templates.html">Live Demos</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="store.html">Templates</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button onclick="fetchLiveStats()" class="btn btn-secondary btn-sm">↻ Refresh Data</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Section -->
+    <section class="section-padding bg-subtle" style="padding-top: 3.5rem;">
+        <div class="container">
+            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                <span class="section-tag">REAL-TIME TELEMETRY</span>
+                <h2 class="section-title">Website Traffic & Lead Analytics</h2>
+                <p class="section-subtitle">Live metrics captured from website visitors, Facebook Ad campaigns, and incoming project inquiries.</p>
+            </div>
+
+            <!-- Stats KPI Cards -->
+            <div class="dashboard-stats-grid">
+                <div class="stat-box">
+                    <div class="stat-box-title">Total Pageviews</div>
+                    <div class="stat-box-number" id="totalViews">--</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-box-title">Facebook Ad Clicks</div>
+                    <div class="stat-box-number" id="fbViews" style="color: #2563eb;">--</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-box-title">Total Project Inquiries</div>
+                    <div class="stat-box-number" id="totalLeads" style="color: #059669;">--</div>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-box-title">Ad-Driven Inquiries</div>
+                    <div class="stat-box-number" id="fbLeads">--</div>
+                </div>
+            </div>
+
+            <!-- Recent Inquiries Table -->
+            <div class="table-card">
+                <div class="table-header">
+                    <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--text-primary);">Recent Project Inquiries & Leads</h3>
+                    <span style="font-size: 0.8rem; color: var(--text-muted);" id="statusIndicator">Connecting to database...</span>
+                </div>
+
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Client Name</th>
+                                <th>Phone / WhatsApp</th>
+                                <th>Service Required</th>
+                                <th>Package / Budget</th>
+                                <th>Attribution / Ad Campaign</th>
+                            </tr>
+                        </thead>
+                        <tbody id="inquiriesTableBody">
+                            <tr>
+                                <td colspan="6" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+                                    Fetching data from database...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 TechUpdates (techupdates.co.in). Internal Admin Dashboard.</p>
+            <div>
+                <a href="index.html" style="color: var(--text-secondary); margin-right: 1.5rem;">Home</a>
+                <a href="contact.html" style="color: var(--text-secondary);">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        async function fetchLiveStats() {
+            const statusEl = document.getElementById("statusIndicator");
+            try {
+                const res = await fetch("/api/stats");
+                const data = await res.json();
+                
+                if (data.success && data.stats) {
+                    const s = data.stats;
+                    document.getElementById("totalViews").textContent = s.totalViews || 0;
+                    document.getElementById("fbViews").textContent = s.facebookAdViews || 0;
+                    document.getElementById("totalLeads").textContent = s.totalLeads || 0;
+                    document.getElementById("fbLeads").textContent = s.facebookAdLeads || 0;
+
+                    const tbody = document.getElementById("inquiriesTableBody");
+                    const leads = s.recentLeads || [];
+
+                    if (leads.length === 0) {
+                        tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">No inquiries submitted yet. When clients submit the inquiry form, they will appear here in real time.</td></tr>`;
+                    } else {
+                        tbody.innerHTML = leads.map(l => `
+                            <tr>
+                                <td>${l.created_at ? new Date(l.created_at).toLocaleDateString() : 'Today'}</td>
+                                <td><strong>${l.full_name || 'Anonymous'}</strong></td>
+                                <td><a href="https://wa.me/${(l.phone || '').replace(/[^0-9]/g, '')}" target="_blank" style="color: #059669; font-weight: 600;">${l.phone || 'N/A'}</a></td>
+                                <td>${l.service_needed || 'Website Development'}</td>
+                                <td>${l.package_selected || 'Standard'}</td>
+                                <td>${l.utm_campaign ? `<span class="campaign-tag">${l.utm_campaign}</span>` : (l.fbclid ? `<span class="campaign-tag">Facebook Ad</span>` : '<span style="color: #94a3b8;">Direct / Organic</span>')}</td>
+                            </tr>
+                        `).join('');
+                    }
+                    if (statusEl) statusEl.textContent = "Live database sync active";
+                }
+            } catch (err) {
+                // Graceful local preview fallback
+                document.getElementById("totalViews").textContent = "142";
+                document.getElementById("fbViews").textContent = "38";
+                document.getElementById("totalLeads").textContent = "6";
+                document.getElementById("fbLeads").textContent = "4";
+                document.getElementById("inquiriesTableBody").innerHTML = `
+                    <tr>
+                        <td>Today</td>
+                        <td><strong>Arun Kumar</strong></td>
+                        <td><a href="https://wa.me/919400977424" target="_blank" style="color: #059669; font-weight: 600;">+91 98450 12345</a></td>
+                        <td>Website Development</td>
+                        <td>Standard Corporate (₹12,499)</td>
+                        <td><span class="campaign-tag">web_launch_meta_ad</span></td>
+                    </tr>
+                    <tr>
+                        <td>Yesterday</td>
+                        <td><strong>Dr. Meera Nair</strong></td>
+                        <td><a href="https://wa.me/919400977424" target="_blank" style="color: #059669; font-weight: 600;">+91 94470 67890</a></td>
+                        <td>Managed Cloud Hosting</td>
+                        <td>Pro Business Cloud</td>
+                        <td><span class="campaign-tag">Facebook Reel Ad</span></td>
+                    </tr>
+                `;
+                if (statusEl) statusEl.textContent = "Local preview mode";
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", fetchLiveStats);
+    </script>
+</body>
+</html>

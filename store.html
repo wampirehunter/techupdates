@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates & Digital Store | TechUpdates</title>
+    <meta name="description" content="Browse ready-to-deploy website templates, SaaS starters, and digital software products engineered by TechUpdates. Launch within 24 hours.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="analytics.js"></script>
+    <style>
+        .store-filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 2rem 0 1rem;
+            flex-wrap: wrap;
+        }
+        .filter-chip {
+            background-color: #f1f5f9;
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            padding: 0.45rem 1.15rem;
+            border-radius: 50px;
+            font-size: 0.86rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+        .filter-chip.active, .filter-chip:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Top Loading Line -->
+    <div id="preloader"><div class="preloader-bar"></div></div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="TechUpdates" style="height: 28px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
+                <span>TechUpdates.</span>
+                <span class="brand-badge">STORE</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="templates.html">Live Demos</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="store.html" class="active">Templates</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
+                <button class="mobile-toggle" id="mobileToggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero text-center" style="padding: 4.5rem 0 2.5rem;">
+        <div class="container">
+            <span class="section-tag">TEMPLATES & STORE</span>
+            <h1 class="hero-title">Ready-to-Deploy <span class="accent-text">Templates & Starter Kits</span></h1>
+            <p class="hero-subtitle">Production-ready website templates engineered for rapid deployment. Test live demos and request custom branding within 24 hours.</p>
+
+            <div class="store-filter-bar">
+                <button class="filter-chip active" onclick="filterItems('all', this)">All Items</button>
+                <button class="filter-chip" onclick="filterItems('website_template', this)">Website Templates</button>
+                <button class="filter-chip" onclick="filterItems('saas_starter', this)">SaaS Starters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Products Grid -->
+    <section class="section-padding bg-subtle" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="store-grid" id="storeProductGrid">
+                <!-- Dynamically populated from /api/products or static fallback -->
+                <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--text-secondary);">
+                    Loading store products...
+                </div>
+            </div>
+
+            <!-- Future Store Info Box -->
+            <div style="margin-top: 3.5rem; background-color: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 2rem; text-align: center; box-shadow: var(--shadow-sm);">
+                <h4 style="font-size: 1.2rem; margin-bottom: 0.35rem; color: var(--text-primary);">Need a custom template or tailored business store?</h4>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.25rem; font-size: 0.92rem;">
+                    We can modify any template to your exact branding or build a complete custom online store with database inventory from scratch.
+                </p>
+                <a href="https://wa.me/919400977424?text=Hi%20TechUpdates,%20I'm%20interested%20in%20customizing%20a%20store%20template." target="_blank" rel="noopener" class="btn btn-whatsapp">
+                    💬 Discuss Custom Store on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 TechUpdates (techupdates.co.in). All rights reserved.</p>
+            <div>
+                <a href="index.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Home</a>
+                <a href="services.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Services</a>
+                <a href="templates.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Live Demos</a>
+                <a href="pricing.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Pricing</a>
+                <a href="hosting.html" style="color: var(--text-secondary); margin-right: 1.25rem;">Hosting</a>
+                <a href="contact.html" style="color: var(--text-secondary);">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let allProducts = [];
+
+        async function fetchProducts() {
+            const grid = document.getElementById("storeProductGrid");
+            try {
+                const res = await fetch("/api/products");
+                const data = await res.json();
+                allProducts = data.products || [];
+                renderProducts(allProducts);
+            } catch (e) {
+                // Fallback static list
+                allProducts = [
+                    {
+                        id: 1,
+                        title: "Nova - SaaS & Tech Startup Template",
+                        category: "website_template",
+                        price_inr: 2499,
+                        price_usd: 29,
+                        description: "High-converting landing page built for modern SaaS products and tech startups.",
+                        image_url: "assets/portfolio/luxury-real-estate.jpg",
+                        demo_url: "demos/saas/index.html"
+                    },
+                    {
+                        id: 2,
+                        title: "Apex - Corporate & Advisory Consulting",
+                        category: "website_template",
+                        price_inr: 2999,
+                        price_usd: 39,
+                        description: "Professional executive multi-page layout for financial, legal and business consultancies.",
+                        image_url: "assets/portfolio/watch-commercial.jpg",
+                        demo_url: "demos/corporate/index.html"
+                    },
+                    {
+                        id: 3,
+                        title: "Luxe - Modern Boutique & E-Commerce",
+                        category: "website_template",
+                        price_inr: 3999,
+                        price_usd: 49,
+                        description: "Modern lifestyle and retail storefront template with cart and filter workflow.",
+                        image_url: "assets/portfolio/perfume-commercial.jpg",
+                        demo_url: "demos/ecommerce/index.html"
+                    },
+                    {
+                        id: 4,
+                        title: "Savor - Restaurant & Cafe Dining",
+                        category: "website_template",
+                        price_inr: 1999,
+                        price_usd: 25,
+                        description: "Appetizing, mobile-first design for cafes, bistros and fine dining establishments.",
+                        image_url: "assets/portfolio/restaurant-food-commercial.jpg",
+                        demo_url: "demos/restaurant/index.html"
+                    }
+                ];
+                renderProducts(allProducts);
+            }
+        }
+
+        function renderProducts(products) {
+            const grid = document.getElementById("storeProductGrid");
+            if (!grid) return;
+            if (products.length === 0) {
+                grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary); padding: 3rem;">No products found in this category.</div>`;
+                return;
+            }
+
+            grid.innerHTML = products.map(item => `
+                <div class="store-card">
+                    <img src="${item.image_url || 'assets/portfolio/luxury-real-estate.jpg'}" alt="${item.title}" class="store-card-img">
+                    <div class="store-card-body">
+                        <span class="store-category">${item.category ? item.category.replace('_', ' ') : 'Template'}</span>
+                        <h4>${item.title}</h4>
+                        <p>${item.description || ''}</p>
+                        <div class="store-footer">
+                            <span class="store-price">₹${item.price_inr.toLocaleString()} / $${item.price_usd}</span>
+                            <div style="display: flex; gap: 0.5rem;">
+                                ${item.demo_url ? `<a href="${item.demo_url}" target="_blank" class="btn btn-secondary btn-sm">Demo</a>` : ''}
+                                <a href="https://wa.me/919400977424?text=${encodeURIComponent("Hi TechUpdates, I'm interested in the template: " + item.title)}" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">Inquire</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function filterItems(cat, btn) {
+            document.querySelectorAll(".filter-chip").forEach(c => c.classList.remove("active"));
+            if (btn) btn.classList.add("active");
+
+            if (cat === "all") {
+                renderProducts(allProducts);
+            } else {
+                const filtered = allProducts.filter(p => p.category === cat);
+                renderProducts(filtered);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", fetchProducts);
+    </script>
+</body>
+</html>

@@ -3,183 +3,591 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechUpdates | AI Advertising & Digital Solutions</title>
-    <meta name="description" content="TechUpdates creates AI-powered advertisements, cinematic product videos, professional websites, applications and custom digital solutions for modern businesses.">
+    <title>TechUpdates | Website Development, Cloud Hosting & App Engineering</title>
+    <meta name="description" content="TechUpdates builds high-speed websites, custom mobile & web applications, and provides managed cloud hosting. Clean code, 100% mobile responsive, zero bloat.">
     
-    <meta property="og:title" content="TechUpdates | AI Advertising & Digital Solutions">
-    <meta property="og:description" content="Creative Ideas. Digital Experiences. Real Business Impact.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="TechUpdates | Fast Website Development & Cloud Hosting">
+    <meta property="og:description" content="Turn visitors into clients with fast, responsive websites, custom apps, and managed cloud hosting.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techupdates.co.in">
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
     
-    <!-- STRICT ROOT STYLESHEET REFERENCE -->
+    <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Ad & Campaign Tracking Engine -->
+    <script src="analytics.js"></script>
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">TechUpdates.</a>
-            <div class="nav-links">
-                <a href="services.html">Services</a>
-                <a href="ai-advertising.html">AI Advertising</a>
-                <a href="work.html">Work</a>
-                <a href="products.html">Products</a>
-                <a href="about.html">About</a>
-            </div>
-            <a href="contact.html" class="btn btn-primary">Start a Project</a>
-            
-            <button class="mobile-menu-btn" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+    <!-- Minimal Eye-Comfort Top Loading Line -->
+    <div id="preloader">
+        <div class="preloader-bar"></div>
+    </div>
 
-    <header class="hero">
-        <div class="hero-video-wrapper">
-            <video autoplay muted loop playsinline poster="assets/images/hero-poster.jpg" class="hero-bg-video"></video>
-            <div class="hero-overlay"></div>
-        </div>
-        
-        <div class="hero-content">
-            <span class="hero-label">Creative & Technology Agency</span>
-            <h1 class="hero-title">We Create Digital Experiences That Get Noticed.</h1>
-            <p class="hero-subtitle">AI-powered advertising, cinematic product content, and professional digital solutions for modern businesses.</p>
-            <div class="hero-actions">
-                <a href="contact.html" class="btn btn-primary">Start a Project</a>
-                <a href="#work" class="btn btn-secondary">View Our Work</a>
+    <!-- =========================================================
+         NAVIGATION
+         ========================================================= -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="logo.png" alt="TechUpdates" style="height: 28px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
+                <span>TechUpdates.</span>
+                <span class="brand-badge">STUDIO</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="templates.html">Live Demos</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="store.html">Templates</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
             </div>
         </div>
     </header>
 
-    <section class="value-prop section-padding">
+    <!-- =========================================================
+         HERO SECTION
+         ========================================================= -->
+    <section class="hero text-center">
         <div class="container">
-            <h2 class="section-title">Creative Ideas. Digital Experiences.<br>Real Business Impact.</h2>
-            <p class="section-desc">We combine creative production and technology to help businesses build better brands, better content, and better digital experiences.</p>
+            <div class="hero-pill">
+                <span class="dot"></span> Available for New Projects • Average Turnaround 3–5 Days
+            </div>
             
-            <div class="capabilities-grid">
-                <div class="capability-item">Advertising</div>
-                <div class="capability-item">Content</div>
-                <div class="capability-item">Web</div>
-                <div class="capability-item">Apps</div>
-                <div class="capability-item">Business Software</div>
+            <h1 class="hero-title">
+                High-Speed Websites & Custom Apps <span class="accent-text">Built for Real Growth.</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                We design and engineer clean, high-converting corporate websites, e-commerce stores, and custom web applications backed by managed cloud hosting and direct developer support.
+            </p>
+
+            <div class="hero-actions">
+                <a href="templates.html" class="btn btn-primary btn-lg">Explore Live Demos</a>
+                <a href="https://wa.me/919400977424?text=Hi%20TechUpdates,%20I'm%20looking%20for%20a%20website%20development%20quote." target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+                    💬 WhatsApp Direct Quote
+                </a>
+                <a href="pricing.html" class="btn btn-secondary btn-lg">View Packages & Pricing</a>
+            </div>
+
+            <!-- Hero Showcase Banner Image -->
+            <div class="hero-banner-wrap">
+                <img src="assets/images/hero-banner.jpg" alt="Modern High-Speed Web & Mobile App Development Showcase" class="hero-banner-img">
+            </div>
+
+            <!-- Balanced, Symmetrical Metrics Strip -->
+            <div class="metrics-strip">
+                <div class="metric-item">
+                    <span class="metric-bullet">•</span>
+                    <span>Under 1.2s Load Speed</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-bullet">•</span>
+                    <span>Free SSL & Global High-Speed CDN</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-bullet">•</span>
+                    <span>100% Mobile & Tablet Responsive</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-bullet">•</span>
+                    <span>Ad Attribution & SEO Ready</span>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-bullet">•</span>
+                    <span>99.9% Uptime Guarantee</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="services-section section-padding bg-darker">
+    <!-- =========================================================
+         SERVICES
+         ========================================================= -->
+    <section id="services" class="section-padding bg-subtle">
         <div class="container">
-            <h2 class="section-title">Creative That Makes Your Brand Stand Out.</h2>
-            
-            <div style="margin: 3rem 0; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05);">
-                <img src="assets/images/advertising-showcase.jpg" alt="Creative Advertising Showcase" style="width: 100%; height: auto; aspect-ratio: 16/9; max-height: 550px; object-fit: cover; display: block;">
+            <div class="section-header">
+                <span class="section-tag">SERVICES</span>
+                <h2 class="section-title">Engineered for Performance and Conversion.</h2>
+                <p class="section-subtitle">No bloated page-builders or slow templates. Every line of code is structured for fast load times, clean aesthetics, and clear business outcomes.</p>
             </div>
-            
+
             <div class="services-grid">
+                <!-- Service 1 -->
                 <div class="service-card">
-                    <h3>AI Product Advertising</h3>
-                    <p>Turn ordinary product photography into cinematic commercial content.</p>
+                    <div class="service-icon-wrap">🌐</div>
+                    <h3>Website Development</h3>
+                    <p>Hand-crafted, responsive websites designed to reflect your brand, establish trust with visitors, and generate qualified leads.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Corporate & Business Consulting Websites</li>
+                        <li><span class="check-icon">✓</span> High-Conversion Landing Pages</li>
+                        <li><span class="check-icon">✓</span> E-Commerce & Product Showcases</li>
+                        <li><span class="check-icon">✓</span> Sub-second load speed & clean code</li>
+                    </ul>
+                    <a href="pricing.html" class="btn btn-secondary btn-sm">Explore Pricing</a>
                 </div>
+
+                <!-- Service 2 -->
                 <div class="service-card">
-                    <h3>Social Media Reels</h3>
-                    <p>Short-form videos designed for Instagram, Facebook and digital campaigns.</p>
+                    <div class="service-icon-wrap">☁️</div>
+                    <h3>Managed Cloud Hosting</h3>
+                    <p>Fast, reliable cloud infrastructure powered by a high-speed global edge network with automated backups and 24/7 security.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Global Edge Caching & Fast SSD</li>
+                        <li><span class="check-icon">✓</span> Free Wildcard SSL Certificate</li>
+                        <li><span class="check-icon">✓</span> Automated Weekly / Daily Backups</li>
+                        <li><span class="check-icon">✓</span> 99.9% High Availability SLA</li>
+                    </ul>
+                    <a href="hosting.html" class="btn btn-secondary btn-sm">View Hosting Specs</a>
                 </div>
+
+                <!-- Service 3 -->
                 <div class="service-card">
-                    <h3>Brand Films</h3>
-                    <p>Story-driven visual content for businesses and brands.</p>
+                    <div class="service-icon-wrap">📱</div>
+                    <h3>Mobile & Web Application MVPs</h3>
+                    <p>Functional web applications, client dashboards, and cross-platform mobile apps built to scale with your growing operations.</p>
+                    <ul class="service-features">
+                        <li><span class="check-icon">✓</span> Cross-Platform iOS & Android MVPs</li>
+                        <li><span class="check-icon">✓</span> Custom Client Dashboards & Portals</li>
+                        <li><span class="check-icon">✓</span> High-Speed Serverless Edge Database</li>
+                        <li><span class="check-icon">✓</span> REST API & Webhook Integrations</li>
+                    </ul>
+                    <a href="contact.html?package=Custom+App+Development" class="btn btn-secondary btn-sm">Discuss App Project</a>
                 </div>
             </div>
-            
-            <div class="cta-container">
-                <a href="ai-advertising.html" class="btn btn-outline">Explore AI Advertising</a>
+
+            <div class="text-center" style="margin-top: 2.5rem;">
+                <a href="services.html" class="btn btn-primary">View All Digital Engineering Services →</a>
             </div>
         </div>
     </section>
 
-    <section id="work" class="work-section section-padding">
+    <!-- =========================================================
+         LIVE TEMPLATE DEMO SHOWCASE
+         ========================================================= -->
+    <section id="demos" class="section-padding">
         <div class="container">
-            <h2 class="section-title">Selected Work</h2>
-            <div class="portfolio-grid" id="portfolio-grid"></div>
+            <div class="section-header">
+                <span class="section-tag">LIVE DEMOS</span>
+                <h2 class="section-title">Test Drive Ready Designs in Real Time.</h2>
+                <p class="section-subtitle">Switch between different industry layouts and test how the responsive design adapts across Desktop, Tablet, and Mobile screens.</p>
+            </div>
+
+            <div class="demo-showcase">
+                <!-- Toolbar -->
+                <div class="demo-toolbar">
+                    <div class="template-tabs">
+                        <button class="tab-btn active" data-template="saas">SaaS & Technology</button>
+                        <button class="tab-btn" data-template="corporate">Corporate & Advisory</button>
+                        <button class="tab-btn" data-template="ecommerce">Boutique & Retail</button>
+                        <button class="tab-btn" data-template="restaurant">Restaurant & Dining</button>
+                    </div>
+
+                    <div class="device-switcher">
+                        <button class="device-btn active" data-device="desktop">Desktop</button>
+                        <button class="device-btn" data-device="tablet">Tablet</button>
+                        <button class="device-btn" data-device="mobile">Mobile</button>
+                    </div>
+                </div>
+
+                <!-- Browser Mockup Frame -->
+                <div class="browser-mockup" id="browserMockup">
+                    <div class="browser-header">
+                        <div class="browser-dots">
+                            <span class="browser-dot red"></span>
+                            <span class="browser-dot yellow"></span>
+                            <span class="browser-dot green"></span>
+                        </div>
+                        <div class="browser-url-bar" id="browserUrl">https://nova-ai.techupdates.co.in</div>
+                        <div class="browser-actions">
+                            <a href="demos/saas/index.html" target="_blank" id="externalDemoLink">↗ Open Fullscreen</a>
+                        </div>
+                    </div>
+                    <div class="demo-iframe-container">
+                        <iframe src="demos/saas/index.html" id="demoIframe" class="demo-iframe" title="Interactive Website Demo"></iframe>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 2rem;">
+                    <a href="templates.html" class="btn btn-primary">Open Dedicated Template Showroom & Device Tester →</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="tech-section section-padding bg-darker">
+    <!-- =========================================================
+         PRICING SECTION
+         ========================================================= -->
+    <section id="pricing" class="section-padding bg-subtle">
         <div class="container">
-            <h2 class="section-title">Technology Built Around Your Business.</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Websites & Apps</h3>
-                    <p>Professional landing pages, custom web applications, and mobile experiences designed for real users.</p>
-                </div>
-                <div class="service-card">
-                    <h3>ERP & Business Software</h3>
-                    <p>Custom business management platforms to streamline your operations.</p>
-                </div>
-                <div class="service-card">
-                    <h3>E-Commerce</h3>
-                    <p>Scalable online stores and commerce platforms designed for high conversion.</p>
+            <div class="section-header">
+                <span class="section-tag">TRANSPARENT RATES</span>
+                <h2 class="section-title">Standard Competitive Packages</h2>
+                <p class="section-subtitle">Transparent freelance rates with clear deliverables and milestones. Select any plan below to get started.</p>
+            </div>
+
+            <!-- Currency Toggle -->
+            <div class="pricing-controls">
+                <div class="currency-toggle">
+                    <button class="currency-btn active" data-currency="INR">₹ INR (India)</button>
+                    <button class="currency-btn" data-currency="USD">$ USD (Global)</button>
                 </div>
             </div>
-            <div class="cta-container">
-                <a href="contact.html" class="btn btn-outline">Build My Solution</a>
+
+            <!-- Pricing Grid -->
+            <div class="pricing-grid">
+                <!-- Package 1 -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Starter Landing Page</h3>
+                    <p class="plan-desc">For small businesses, portfolios, or launching a targeted marketing campaign.</p>
+                    <div class="plan-price-wrap" data-price-inr="4,999" data-price-usd="99">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount">4,999</span>
+                        <span class="price-period">one-time</span>
+                    </div>
+                    <ul class="plan-specs">
+                        <li><span class="check">✓</span> 1-Page High-Conversion Layout</li>
+                        <li><span class="check">✓</span> 100% Mobile & Tablet Responsive</li>
+                        <li><span class="check">✓</span> Direct WhatsApp & Call Integration</li>
+                        <li><span class="check">✓</span> Contact Inquiry Form with Notifications</li>
+                        <li><span class="check">✓</span> Free Wildcard SSL Setup</li>
+                        <li><span class="check">✓</span> Turnaround in 2 to 3 Business Days</li>
+                    </ul>
+                    <button class="btn btn-secondary select-package-btn" data-package="Starter Landing Page" data-service="Website Development">
+                        Select Plan & Get Quote
+                    </button>
+                </div>
+
+                <!-- Package 2 (Most Popular) -->
+                <div class="pricing-card featured">
+                    <span class="popular-badge">RECOMMENDED</span>
+                    <h3 class="plan-name">Standard Corporate</h3>
+                    <p class="plan-desc">Complete multi-page corporate website designed to establish authority and drive inquiries.</p>
+                    <div class="plan-price-wrap" data-price-inr="12,499" data-price-usd="199">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount">12,499</span>
+                        <span class="price-period">one-time</span>
+                    </div>
+                    <ul class="plan-specs">
+                        <li><span class="check">✓</span> Up to 7 Custom Designed Pages</li>
+                        <li><span class="check">✓</span> Clean Responsive Layout & Fast Transitions</li>
+                        <li><span class="check">✓</span> Facebook Pixel & Ad Attribution Setup</li>
+                        <li><span class="check">✓</span> Google Search Console & Meta Tags</li>
+                        <li><span class="check">✓</span> Core Web Vitals (< 1.2s Load Speed)</li>
+                        <li><span class="check">✓</span> 30 Days Free Post-Launch Support</li>
+                        <li><span class="check">✓</span> Turnaround in 5 to 7 Business Days</li>
+                    </ul>
+                    <button class="btn btn-primary select-package-btn" data-package="Standard Corporate Website" data-service="Website Development">
+                        Select Plan & Get Quote
+                    </button>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="pricing-card">
+                    <h3 class="plan-name">Custom E-Commerce / App</h3>
+                    <p class="plan-desc">For online stores, catalog systems, or customized interactive web applications.</p>
+                    <div class="plan-price-wrap" data-price-inr="24,999" data-price-usd="399">
+                        <span class="price-currency">₹</span>
+                        <span class="price-amount">24,999</span>
+                        <span class="price-period">one-time</span>
+                    </div>
+                    <ul class="plan-specs">
+                        <li><span class="check">✓</span> Unlimited Products / Filterable Catalog</li>
+                        <li><span class="check">✓</span> Instant Cart & Order Workflow</li>
+                        <li><span class="check">✓</span> High-Speed Edge SQL Database</li>
+                        <li><span class="check">✓</span> Admin Lead & Inquiry Management</li>
+                        <li><span class="check">✓</span> Custom Serverless Edge APIs</li>
+                        <li><span class="check">✓</span> Turnaround in 10 to 14 Business Days</li>
+                    </ul>
+                    <button class="btn btn-secondary select-package-btn" data-package="Custom E-Commerce / App" data-service="Custom E-Commerce / Web App">
+                        Select Plan & Get Quote
+                    </button>
+                </div>
+            </div>
+
+            <!-- Managed Hosting Banner -->
+            <div id="hosting" class="hosting-banner">
+                <div class="hosting-info">
+                    <h4>Managed Cloud Hosting & SSL</h4>
+                    <p>Starting at just <strong data-price-inr="₹299/mo" data-price-usd="$5/mo">₹299/mo</strong> with Free SSL, Global High-Speed CDN, and automated backups.</p>
+                </div>
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                    <a href="hosting.html" class="btn btn-secondary">
+                        View Hosting Specs & Plans →
+                    </a>
+                    <a href="pricing.html" class="btn btn-primary">
+                        Use Interactive Cost Calculator
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="products-section section-padding">
+    <!-- =========================================================
+         READY-TO-DEPLOY TEMPLATES (FUTURE STORE)
+         ========================================================= -->
+    <section class="section-padding">
         <div class="container">
-            <div class="product-showcase">
-                <div class="product-info">
-                    <span class="eyebrow">Our Products</span>
-                    <h2 class="section-title">Skolar.</h2>
-                    <p>An advanced education technology and management solution developed entirely by TechUpdates. Designed to streamline institutional operations and enhance learning experiences.</p>
-                    <a href="products.html" class="btn btn-secondary mt-4">Discover Skolar</a>
+            <div class="section-header">
+                <span class="section-tag">TEMPLATES</span>
+                <h2 class="section-title">Ready-Made Designs Ready in 24 Hours.</h2>
+                <p class="section-subtitle">Need to launch immediately? Browse our pre-built, production-tested website templates ready for your branding.</p>
+            </div>
+
+            <div class="store-grid">
+                <div class="store-card">
+                    <img src="assets/portfolio/luxury-real-estate.jpg" alt="Nova SaaS Template" class="store-card-img">
+                    <div class="store-card-body">
+                        <span class="store-category">SaaS & Technology</span>
+                        <h4>Nova Platform Template</h4>
+                        <p>Modern dark/light SaaS landing page with animated feature cards and pricing table.</p>
+                        <div class="store-footer">
+                            <span class="store-price" data-price-inr="₹2,499" data-price-usd="$29">₹2,499 / $29</span>
+                            <a href="demos/saas/index.html" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-visual">
-                    <div class="visual-placeholder">
-                        <span>AI VISUAL: skolar-platform.jpg</span>
+
+                <div class="store-card">
+                    <img src="assets/portfolio/watch-commercial.jpg" alt="Apex Corporate Template" class="store-card-img">
+                    <div class="store-card-body">
+                        <span class="store-category">Corporate & Advisory</span>
+                        <h4>Apex Advisory Template</h4>
+                        <p>Sophisticated executive layout tailored for financial, legal, and management consultants.</p>
+                        <div class="store-footer">
+                            <span class="store-price" data-price-inr="₹2,999" data-price-usd="$39">₹2,999 / $39</span>
+                            <a href="demos/corporate/index.html" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-card">
+                    <img src="assets/portfolio/perfume-commercial.jpg" alt="Luxe E-Commerce Template" class="store-card-img">
+                    <div class="store-card-body">
+                        <span class="store-category">Boutique & Retail</span>
+                        <h4>Luxe Storefront Template</h4>
+                        <p>Modern lifestyle retail store with responsive catalog, instant cart, and category tabs.</p>
+                        <div class="store-footer">
+                            <span class="store-price" data-price-inr="₹3,999" data-price-usd="$49">₹3,999 / $49</span>
+                            <a href="demos/ecommerce/index.html" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="store-card">
+                    <img src="assets/portfolio/restaurant-food-commercial.jpg" alt="Savor Dining Template" class="store-card-img">
+                    <div class="store-card-body">
+                        <span class="store-category">Dining & Hospitality</span>
+                        <h4>Savor Bistro Template</h4>
+                        <p>Clean restaurant and cafe layout with interactive digital menu and table booking flow.</p>
+                        <div class="store-footer">
+                            <span class="store-price" data-price-inr="₹1,999" data-price-usd="$25">₹1,999 / $25</span>
+                            <a href="demos/restaurant/index.html" target="_blank" class="btn btn-secondary btn-sm">Preview</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="text-center" style="margin-top: 2.5rem;">
+                <a href="store.html" class="btn btn-secondary">Explore All Templates & Digital Store →</a>
+            </div>
         </div>
     </section>
 
-    <section class="final-cta section-padding">
-        <div class="container text-center">
-            <h2 class="section-title">Let's Build Something Worth Talking About.</h2>
-            <a href="contact.html" class="btn btn-primary btn-large">Start a Project</a>
+    <!-- =========================================================
+         INQUIRY FORM & DIRECT CONTACT
+         ========================================================= -->
+    <section id="contact" class="section-padding bg-subtle">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Left: Direct Options -->
+                <div class="contact-info">
+                    <span class="section-tag">GET IN TOUCH</span>
+                    <h3>Let's Build Your Website.</h3>
+                    <p>
+                        Have a project in mind or need a formal quote? Fill out the form or connect directly with our developer via WhatsApp.
+                    </p>
+
+                    <div class="contact-direct-cards">
+                        <a href="https://wa.me/919400977424?text=Hi%20TechUpdates,%20I'm%20interested%20in%20building%20a%20website." target="_blank" rel="noopener" class="direct-card">
+                            <div class="direct-icon icon-whatsapp">💬</div>
+                            <div>
+                                <strong>WhatsApp Direct</strong>
+                                <div style="color: var(--text-secondary); font-size: 0.84rem;">Fast response (+91 9400977424)</div>
+                            </div>
+                        </a>
+
+                        <a href="tel:+919400977424" class="direct-card">
+                            <div class="direct-icon icon-phone">📞</div>
+                            <div>
+                                <strong>Direct Voice Call</strong>
+                                <div style="color: var(--text-secondary); font-size: 0.84rem;">Mon - Sat (9:00 AM - 7:00 PM IST)</div>
+                            </div>
+                        </a>
+
+                        <a href="mailto:hello@techupdates.co.in" class="direct-card">
+                            <div class="direct-icon icon-email">✉️</div>
+                            <div>
+                                <strong>Official Email</strong>
+                                <div style="color: var(--text-secondary); font-size: 0.84rem;">hello@techupdates.co.in</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Clean Form -->
+                <div class="form-box">
+                    <form id="inquiryForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Your Full Name *</label>
+                                <input type="text" id="fullName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Mobile / WhatsApp Number *</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="e.g. +91 9876543210" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" class="form-control" placeholder="e.g. rahul@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company / Business Name</label>
+                                <input type="text" id="company" class="form-control" placeholder="e.g. Apex Corp">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="serviceNeeded">Service Required</label>
+                                <select id="serviceNeeded" class="form-control">
+                                    <option value="Website Development" selected>Website Development</option>
+                                    <option value="Managed Cloud Hosting">Managed Cloud Hosting</option>
+                                    <option value="Mobile / Web App Development">Mobile / Web App Development</option>
+                                    <option value="Custom E-Commerce Store">Custom E-Commerce Store</option>
+                                    <option value="Website Redesign & Speed Optimization">Website Redesign & Speed Optimization</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="packageSelected">Selected Package</label>
+                                <input type="text" id="packageSelected" class="form-control" value="Standard Corporate Website">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="budget">Estimated Budget</label>
+                                <select id="budget" class="form-control">
+                                    <option value="₹4,999 - ₹12,499 ($99 - $199)">₹4,999 - ₹12,499 ($99 - $199)</option>
+                                    <option value="₹12,499 - ₹24,999 ($199 - $399)">₹12,499 - ₹24,999 ($199 - $399)</option>
+                                    <option value="₹25,000 - ₹50,000+ ($400 - $700+)">₹25,000 - ₹50,000+ ($400 - $700+)</option>
+                                    <option value="Flexible / Based on Scope">Flexible / Based on Scope</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="timeline">Desired Timeline</label>
+                                <select id="timeline" class="form-control">
+                                    <option value="Immediate (2 - 3 Days)">Immediate (2 - 3 Days)</option>
+                                    <option value="Standard (1 - 2 Weeks)" selected>Standard (1 - 2 Weeks)</option>
+                                    <option value="Within 1 Month">Within 1 Month</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projectDetails">Project Requirements</label>
+                            <textarea id="projectDetails" class="form-control" placeholder="Briefly describe what kind of website or features you need..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+                            Submit Inquiry & Chat on WhatsApp →
+                        </button>
+
+                        <p class="form-note">
+                            Submissions are securely stored and forwarded directly to WhatsApp.
+                        </p>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
     <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-brand">
-                <h3>TechUpdates.</h3>
-                <p>Creative production and digital technology for modern businesses.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo">
+                        <img src="logo.png" alt="TechUpdates" style="height: 24px; width: auto; object-fit: contain;" onerror="this.style.display='none'">
+                        <span>TechUpdates.</span>
+                    </a>
+                    <p>Website engineering, managed cloud hosting, and web applications for modern businesses.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="services.html">Website Development</a></li>
+                        <li><a href="hosting.html">Managed Cloud Hosting</a></li>
+                        <li><a href="templates.html">Live Demo Showroom</a></li>
+                        <li><a href="pricing.html">Pricing & Calculator</a></li>
+                        <li><a href="store.html">Templates Store</a></li>
+                        <li><a href="dashboard.html">Lead & Ad Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Demos</h4>
+                    <ul>
+                        <li><a href="demos/saas/index.html" target="_blank">SaaS Landing Demo</a></li>
+                        <li><a href="demos/corporate/index.html" target="_blank">Corporate Demo</a></li>
+                        <li><a href="demos/ecommerce/index.html" target="_blank">E-Commerce Demo</a></li>
+                        <li><a href="demos/restaurant/index.html" target="_blank">Restaurant Demo</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Direct Contact</h4>
+                    <ul>
+                        <li><a href="tel:+919400977424">+91 9400977424</a></li>
+                        <li><a href="https://wa.me/919400977424" target="_blank">WhatsApp Direct</a></li>
+                        <li><a href="mailto:hello@techupdates.co.in">hello@techupdates.co.in</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <a href="about.html">About Us</a>
-                <a href="work.html">Our Work</a>
-                <a href="products.html">Skolar</a>
-            </div>
-            <div class="footer-contact">
-                <h4>Contact</h4>
-                <a href="mailto:hello@techupdates.co.in">hello@techupdates.co.in</a>
-                <a href="https://wa.me/YOURNUMBER?text=Hi%20TechUpdates,%20I'm%20interested%20in%20starting%20a%20project.">WhatsApp Us</a> 
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 TechUpdates. All rights reserved.</p>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 TechUpdates (techupdates.co.in). All rights reserved.</p>
+                <div>
+                    <span>Fast • Responsive • Secure</span>
+                    <a href="dashboard.html" style="color: var(--text-muted); margin-left: 1.5rem; text-decoration: underline;">Analytics Dashboard</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Toast Notification -->
+    <div id="toast"></div>
+
+    <!-- Master Controller Script -->
     <script src="main.js"></script>
 </body>
 </html>
