@@ -37,6 +37,13 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.querySelectorAll("a").forEach(link => {
             link.addEventListener("click", () => navLinks.classList.remove("show"));
         });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+            if (navLinks.classList.contains("show") && !navLinks.contains(e.target) && !mobileToggle.contains(e.target)) {
+                navLinks.classList.remove("show");
+            }
+        });
     }
 
     // =========================================================
